@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jr/Desktop/SmartLock/Codigo/src/smart_lock_app.h
+
+/home/jr/Desktop/SmartLock/Codigo/test/test_smart_lock.cc
+gtest/gtest.h
+-
+cmath
+-
+sstream
+-
+string
+-
+../src/smart_lock_app.h
+/home/jr/Desktop/SmartLock/Codigo/src/smart_lock_app.h
+
