@@ -11,18 +11,28 @@
  *           Valerio Luis Cabrera, alu0101476049@ull.edu.es
  *           José Ramón Morera Campos, alu0101471846@ull.edu.es
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
- * @date    12/04/2023
- * @file    smart_lock_app.cc
- * @brief   Programa cliente. Aplicación para la gestión de cerraduras inteligentes.
+ * @date    17/04/2023
+ * @file    cerradura_inteligente.h
+ * @brief   Declaración de la clase "CerraduraInteligente". Permite a la
+ *          cerradura abrirse y cerrarse.
+ *
  *
  * @see
  *
  * Historial de revisiones
- *          12/04/2023 - Creación (primera versión) del código
+ *          17/04/2023 - Creación (primera versión) del código
  */
-#include <iostream>
 
-int main() {
-  std::cout << "Hola, mundo!" << std::endl;
-  return 0;
-}
+#ifndef CERRADURA_INTELIGENTE
+#define CERRADURA_INTELIGENTE
+
+class CerraduraInteligente {
+ public:
+  void Abrir();
+  void Cerrar();
+
+ private:
+  bool cerrada_{};
+};
+
+#endif
