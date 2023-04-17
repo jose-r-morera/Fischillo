@@ -6,7 +6,7 @@ Una vez finalizados, puedes eliminar el directorio que se crea.
 
 
 ## Uso de cmake
-Simplemente modifica el fichero cmake por cada nuevo fichero a compilar 
+Simplemente modifica el fichero *CMakeLists* por cada nuevo fichero a compilar 
 (en dicho fichero tienes las instrucciones)
 
 Ejecuta entonce "**cmake ..**" en el directorio */build* para generar el nuevo makefile
