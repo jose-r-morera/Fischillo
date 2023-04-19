@@ -53,9 +53,12 @@ add_executable(runTests
 
 # Adds an executable target called "SmartLockApp" to be built from the source files listed in the command invocation.
 # Add a new line for each new .cc file
+
+# Añadir archivos de código (.cc) aquí:
 add_executable(SmartLockApp
     src/smart_lock_app.cc)
 
+    
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 
 # Add expected compiler features to a target.

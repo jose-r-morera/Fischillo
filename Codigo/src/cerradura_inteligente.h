@@ -28,11 +28,11 @@
 
 class CerraduraInteligente {
  public:
-  void Abrir();
-  void Cerrar();
+  void Interaccion() { estado_ = !estado_; }
+  bool GetEstadoCerradura() { return estado_; }
 
  private:
-  bool cerrada_{};
+  bool estado_{};
 };
 
 #endif
