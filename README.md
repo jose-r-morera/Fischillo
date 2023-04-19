@@ -1,5 +1,8 @@
 # SmartLock
 
+## Conectarse a github desde el Centro de Cálculo
+git clone https://github.com/jose-r-morera/SmartLock.git
+
 ## Instalación de Suite Google Tests
 Para instalar GTEST, sigue los pasos del fichero **instalarGoogleTest.txt** con la terminal.
 Una vez finalizados, puedes eliminar el directorio que se crea.
