@@ -56,7 +56,7 @@ add_executable(runTests
 
 # Añadir archivos de código (.cc) aquí:
 add_executable(SmartLockApp
-    src/smart_lock_app.cc)
+    src/cliente.cc)
 
     
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
