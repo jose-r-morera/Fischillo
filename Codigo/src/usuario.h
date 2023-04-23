@@ -28,8 +28,6 @@
 #include <iostream>
 #include <fstream>
 
-#include "base_datos.h"
-
 class Usuario {
  public:
   // Constructor por defecto
