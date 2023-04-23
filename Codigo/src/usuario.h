@@ -58,7 +58,7 @@ class Usuario {
         os.write(reinterpret_cast<const char*>(&administrador_), sizeof(administrador_));
     }
 
-  void Deserialize(std::istream& is)  {
+    void Deserialize(std::istream& is)  {
         // Deserialize id_usuario_
         is.read(reinterpret_cast<char*>(&id_usuario_), sizeof(id_usuario_));
 

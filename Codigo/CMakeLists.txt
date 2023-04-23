@@ -59,6 +59,9 @@ add_executable(SmartLockApp
     src/cliente.cc
     src/base_datos.cc)
 
+add_executable(funciona
+    src/base_datos.cc
+    src/funciona.cc)
     
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 

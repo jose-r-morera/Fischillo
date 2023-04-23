@@ -55,4 +55,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/runTests.dir/DependInfo.cmake"
   "CMakeFiles/SmartLockApp.dir/DependInfo.cmake"
+  "CMakeFiles/funciona.dir/DependInfo.cmake"
   )

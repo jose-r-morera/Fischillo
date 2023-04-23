@@ -156,4 +156,6 @@ CMakeFiles/SmartLockApp.dir/src/cliente.cc.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/ctime \
  /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/excepcion.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cliente_funciones.h

@@ -1,4 +1,4 @@
-CMakeFiles/SmartLockApp.dir/src/base_datos.cc.o: \
+CMakeFiles/funciona.dir/src/base_datos.cc.o: \
  /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.cc \
  /usr/include/stdc-predef.h \
  /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.h \
