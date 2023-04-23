@@ -70,7 +70,7 @@ class BaseDatos {
 
   // Getters
   std::vector<Usuario> GetUsuarios() const { return usuarios_; }
-
+  std::vector<CerraduraInteligente> GetCerraduras() const { return cerraduras_; }
   // Serializar
   void Serialize(std::ostream& os) const;
   // Deserializar

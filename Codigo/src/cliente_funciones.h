@@ -38,6 +38,6 @@ bool IniciarSesion(const BaseDatos& kBaseDeDatos);
 
 /// Opciones del menú de la app
 bool InteractuarCerraduras(const BaseDatos& kBaseDeDatos);
-bool ConcederAcceso(const BaseDatos& kBaseDeDatos);
+bool ConcederAcceso(const BaseDatos& kBaseDeDatos, const Usuario& kUsuario);
 
 #endif

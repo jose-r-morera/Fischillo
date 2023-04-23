@@ -37,14 +37,16 @@ class Usuario {
   // Devuelve la ID del usuario
   unsigned GetId() const { return id_usuario_; }
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
-  void PermitirAccesoCerradura(unsigned id_cerradura_) { cerraduras_permitidas_.push_back(id_cerradura_); }
+  void PermitirAccesoCerradura(unsigned id_cerradura) const { cerraduras_permitidas_.push_back(id_cerradura); }
   // Comprueba si el usuario tiene permisos de administrador
-  bool Administrador() { return administrador_; }
+  bool GetAdministrador() const { return administrador_; }
   // Devuelve el nombre del usuario
   std::string GetNombreUsuario() const { return nombre_usuario_; }
   // Comprueba si la contraseña introducida es correcta
   bool ConfirmarContrasenya(std::string contrasenya_introducida) const { return ( std::hash<std::string>{}(contrasenya_introducida) == contrasenya_ ); }
-  
+  // Almacenamos la contraseña en contrasenya_
+  void SetContrasenya(std::string contrasenya) { contrasenya_ = std::hash<std::string>{}(contrasenya); }
+
   void Serialize(std::ostream& os) const;
   void Deserialize(std::istream& is);
 
@@ -56,7 +58,7 @@ class Usuario {
   // Contraseña de identificación del usuario; es un std::hash
   size_t contrasenya_;
   // Cerraduras a las que tiene acceso el usuario
-  std::vector<int> cerraduras_permitidas_{};
+  std::vector<unsigned> cerraduras_permitidas_;
   // En caso de que el usuario tiene permisos de administrador
   bool administrador_;
 };
