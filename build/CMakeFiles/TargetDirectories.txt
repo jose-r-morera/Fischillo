@@ -1,0 +1,4 @@
+/home/jr/Desktop/SmartLock/build/CMakeFiles/rebuild_cache.dir
+/home/jr/Desktop/SmartLock/build/CMakeFiles/edit_cache.dir
+/home/jr/Desktop/SmartLock/build/CMakeFiles/SmartLockApp.dir
+/home/jr/Desktop/SmartLock/build/CMakeFiles/runTests.dir

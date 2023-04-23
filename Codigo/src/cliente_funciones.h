@@ -36,4 +36,8 @@ bool Registrarse(const BaseDatos& kBaseDeDatos);
 
 bool IniciarSesion(const BaseDatos& kBaseDeDatos);
 
+/// Opciones del menú de la app
+bool InteractuarCerraduras(const BaseDatos& kBaseDeDatos);
+bool ConcederAcceso(const BaseDatos& kBaseDeDatos);
+
 #endif

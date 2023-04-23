@@ -3,3 +3,5 @@ makefile
 **/Makefile
 **/makefile
 **/CMakeCache.txt
+.vscode
+**/.vscode

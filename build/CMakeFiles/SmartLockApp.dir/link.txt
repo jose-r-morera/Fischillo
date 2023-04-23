@@ -1,0 +1,1 @@
+/usr/bin/clang++-10  -g -Wall -pedantic -O0  -rdynamic CMakeFiles/SmartLockApp.dir/src/cliente.cc.o CMakeFiles/SmartLockApp.dir/src/base_datos.cc.o  -o /home/jr/Desktop/SmartLock/Codigo/build/SmartLockApp 
