@@ -30,60 +30,23 @@
 
 class Usuario {
  public:
-  Usuario() : id_usuario_{0}, nombre_usuario_{""}, administrador_{false} {}
   // Constructor por defecto
+  Usuario() : id_usuario_{0}, nombre_usuario_{""}, administrador_{false} {}
+  // Constructor por parámetros
   Usuario(unsigned id, std::string nombre, bool admin = false) : id_usuario_(id), nombre_usuario_(nombre), administrador_(admin) {}
   // Devuelve la ID del usuario
-  unsigned Id() const { return id_usuario_; }
+  unsigned GetId() const { return id_usuario_; }
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
   void PermitirAccesoCerradura(unsigned id_cerradura_) { cerraduras_permitidas_.push_back(id_cerradura_); }
   // Comprueba si el usuario tiene permisos de administrador
   bool Administrador() { return administrador_; }
+  // Devuelve el nombre del usuario
+  std::string GetNombreUsuario() const { return nombre_usuario_; }
 
-  void Serialize(std::ostream& os)const {
-        // Serialize id_usuario_
-        os.write(reinterpret_cast<const char*>(&id_usuario_), sizeof(id_usuario_));
+  void Serialize(std::ostream& os) const;
+  void Deserialize(std::istream& is);
 
-        // Serialize nombre_usuario_
-        std::size_t nombre_size = nombre_usuario_.size();
-        os.write(reinterpret_cast<const char*>(&nombre_size), sizeof(nombre_size));
-        os.write(nombre_usuario_.data(), nombre_size);
-
-        // Serialize cerraduras_permitidas_
-        std::size_t cerraduras_size = cerraduras_permitidas_.size();
-        os.write(reinterpret_cast<const char*>(&cerraduras_size), sizeof(cerraduras_size));
-        os.write(reinterpret_cast<const char*>(cerraduras_permitidas_.data()), cerraduras_size * sizeof(int));
-
-        // Serialize administrador_
-        os.write(reinterpret_cast<const char*>(&administrador_), sizeof(administrador_));
-    }
-
-    void Deserialize(std::istream& is)  {
-        // Deserialize id_usuario_
-        is.read(reinterpret_cast<char*>(&id_usuario_), sizeof(id_usuario_));
-
-        // Deserialize nombre_usuario_
-        std::size_t nombre_size;
-        is.read(reinterpret_cast<char*>(&nombre_size), sizeof(nombre_size));
-        nombre_usuario_.resize(nombre_size);
-        is.read(&nombre_usuario_[0], nombre_size);
-
-        // Deserialize cerraduras_permitidas_
-        std::size_t cerraduras_size;
-        is.read(reinterpret_cast<char*>(&cerraduras_size), sizeof(cerraduras_size));
-        cerraduras_permitidas_.resize(cerraduras_size);
-        is.read(reinterpret_cast<char*>(cerraduras_permitidas_.data()), cerraduras_size * sizeof(int));
-
-        // Deserialize administrador_
-        is.read(reinterpret_cast<char*>(&administrador_), sizeof(administrador_));
-    }
-
-    unsigned GetId() const { return id_usuario_; }
-
-    std::string GetNombreUsuario() const { return nombre_usuario_; }
-  
  private:
-
   // Identificador numérico del usuario
   unsigned id_usuario_;
   // Identificador alfabético del usuario
