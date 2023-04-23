@@ -31,9 +31,9 @@
 class Usuario {
  public:
   // Constructor por defecto
-  Usuario() : id_usuario_{0}, nombre_usuario_{""}, contrasenya_{""}, administrador_{false} {}
+  Usuario() : id_usuario_{0}, nombre_usuario_{""}, contrasenya_{}, administrador_{false} {}
   // Constructor por parámetros
-  Usuario(unsigned id, std::string nombre, std::string contrasenya, bool admin = false) : id_usuario_(id), nombre_usuario_(nombre), contrasenya_(contrasenya), administrador_(admin) {}
+  Usuario(unsigned id, std::string nombre, std::string contrasenya = "", bool admin = false) : id_usuario_(id), nombre_usuario_(nombre), contrasenya_(std::hash<std::string>{}(contrasenya)), administrador_(admin) {}
   // Devuelve la ID del usuario
   unsigned GetId() const { return id_usuario_; }
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
@@ -43,7 +43,7 @@ class Usuario {
   // Devuelve el nombre del usuario
   std::string GetNombreUsuario() const { return nombre_usuario_; }
   // Comprueba si la contraseña introducida es correcta
-  bool ConfirmarContrasenya(std::string contrasenya_introducida) const { return ( contrasenya_introducida == contrasenya_ ); }
+  bool ConfirmarContrasenya(std::string contrasenya_introducida) const { return ( std::hash<std::string>{}(contrasenya_introducida) == contrasenya_ ); }
   
   void Serialize(std::ostream& os) const;
   void Deserialize(std::istream& is);
@@ -53,8 +53,8 @@ class Usuario {
   unsigned id_usuario_;
   // Identificador alfabético del usuario
   std::string nombre_usuario_;
-  // Contraseña de identificación del usuario
-  std::string contrasenya_;
+  // Contraseña de identificación del usuario; es un std::hash
+  size_t contrasenya_;
   // Cerraduras a las que tiene acceso el usuario
   std::vector<int> cerraduras_permitidas_{};
   // En caso de que el usuario tiene permisos de administrador
