@@ -23,21 +23,42 @@
  *          17/04/2023 - Creación (primera versión) del código
  */
 
-#ifndef CERRADURA_INTELIGENTE
-#define CERRADURA_INTELIGENTE
+#ifndef CERRADURA_INTELIGENTE_H
+#define CERRADURA_INTELIGENTE_H
+
+#include <iostream>
+#include <fstream>
 
 class CerraduraInteligente {
  public:
-  CerraduraInteligente(const unsigned id) : id_(id) {}
+  CerraduraInteligente(const unsigned id = 0) : id_(id) {}
 
   void Interaccion() { abierto_ = !abierto_; }
+
+   // Serialize function
+    void Serialize(std::ostream& os) const {
+        // Serialize id_
+        os.write(reinterpret_cast<const char*>(&id_), sizeof(id_));
+
+        // Serialize abierto_
+        os.write(reinterpret_cast<const char*>(&abierto_), sizeof(abierto_));
+    }
+
+    // Deserialize function
+    void Deserialize(std::istream& is) {
+        // Deserialize id_
+        is.read(reinterpret_cast<char*>(&id_), sizeof(id_));
+
+        // Deserialize abierto_
+        is.read(reinterpret_cast<char*>(&abierto_), sizeof(abierto_));
+    }
   
   /// Getters
   bool Abierto() const { return abierto_; }
   unsigned Id() const { return id_; }
 
  private:
-  unsigned id_;
+  unsigned id_{};
   bool abierto_{false};
 };
 

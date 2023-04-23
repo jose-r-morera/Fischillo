@@ -12,8 +12,8 @@
  *           José Ramón Morera Campos, alu0101471846@ull.edu.es
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
  * @date    12/04/2023
- * @file    aplicacion.h
- * @brief   Declaración de la clase Aplicación para la gestión de cerraduras inteligentes.
+ * @file    cliente.cc
+ * @brief   Programa cliente. Aplicación para la gestión de cerraduras inteligentes.
  *
  * @see
  *
@@ -21,3 +21,19 @@
  *          12/04/2023 - Creación (primera versión) del código
  */
 
+#ifndef  CLIENTE_FUNCIONES_H
+#define  CLIENTE_FUNCIONES_H
+
+#include <iostream>
+#include <fstream>
+
+#include "base_datos.h"
+
+// Retorna la ID del usuario
+unsigned Identificacion(const BaseDatos& kBaseDeDatos);
+
+bool Registrarse(const BaseDatos& kBaseDeDatos);
+
+bool IniciarSesion(const BaseDatos& kBaseDeDatos);
+
+#endif

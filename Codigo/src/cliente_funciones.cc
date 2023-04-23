@@ -20,32 +20,33 @@
  * Historial de revisiones
  *          12/04/2023 - Creación (primera versión) del código
  */
-#include <iostream>
-#include <fstream>
-
-#include "base_datos.h"
 #include "cliente_funciones.h"
 
-int main() {
-  std::cout << "Programa para hacer cosas UwU" << std::endl;
-  
-  // Leemos la base de datos del fichero que la contiene
-  const std::string kFicheroBaseDatos{"base_datos.txt"}; 
-  std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
-  BaseDatos base_datos_leida{};
-  base_datos_leida.Deserialize(ifs);
-  ifs.close();
+// Retorna la ID del usuario
+unsigned Identificacion(const BaseDatos& kBaseDeDatos) {
 
-  /// El usuario se debe identificar
-  const unsigned kIdUsuario = Identificacion(base_datos_leida);
+  std::cout << "Debe identificarse\n\n"
+  "a) Registrarse\n"
+  "b) Iniciar sesión\n";
+  char opcion{};
+  std::cin >> opcion;
 
-  
-  // Guardamos los cambios
-  std::ofstream ofs("base_datos.txt", std::ios::binary);
-  // Serializamos la base de datos, guardandola en el fichero
-  base_datos_leida.Serialize(ofs);
-  // Cerrramos el fichero
-  ofs.close();
+  switch(opcion) {
+    case 'a': { 
+      /// Creamos un nuevo usuario
+      Registrarse(kBaseDeDatos);
+    }
+    break;
 
+    case 'b': {
+      // Intentamos iniciar sesión
+      IniciarSesion(kBaseDeDatos);
+    }
+    break;
+  } 
   return 0;
 }
+
+bool Registrarse(const BaseDatos& kBaseDeDatos) {return false;}
+
+bool IniciarSesion(const BaseDatos& kBaseDeDatos) {return false;}

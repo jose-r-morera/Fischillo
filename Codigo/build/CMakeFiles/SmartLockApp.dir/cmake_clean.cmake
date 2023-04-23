@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SmartLockApp.dir/src/base_datos.cc.o"
+  "CMakeFiles/SmartLockApp.dir/src/base_datos.cc.o.d"
   "CMakeFiles/SmartLockApp.dir/src/cliente.cc.o"
   "CMakeFiles/SmartLockApp.dir/src/cliente.cc.o.d"
   "SmartLockApp"
