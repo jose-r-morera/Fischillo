@@ -28,12 +28,12 @@
 bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
   // Comprueba que el id no se haya usado
   for (const auto& usuario : usuarios_)  {
-    if (usuario.Id() == nuevo_usuario.Id()) {
+    if (usuario.GetId() == nuevo_usuario.GetId()) {
       return false;
     }
   }
   for (const auto& cerradura : cerraduras_)  {
-    if (cerradura.Id() == nuevo_usuario.Id()) {
+    if (cerradura.Id() == nuevo_usuario.GetId()) {
       return false;
     }
   }
@@ -44,7 +44,7 @@ bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
 bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
   // Comprueba que el id no se haya usado
   for (const auto& usuario : usuarios_)  {
-    if (usuario.Id() == nueva_cerradura.Id()) {
+    if (usuario.GetId() == nueva_cerradura.Id()) {
       return false;
     }
   }
@@ -64,7 +64,7 @@ bool BaseDatos::Insertar(const acceso& nuevo_acceso) {
 
 bool BaseDatos::EliminarUsuario(const unsigned id) {
   for (int i{0}; i < NumeroDeUsuarios(); ++i) {
-    if (usuarios_[i].Id() == id) {
+    if (usuarios_[i].GetId() == id) {
       usuarios_.erase(usuarios_.begin() + i);
       return true;
     }
@@ -85,7 +85,7 @@ bool BaseDatos::EliminarCerradura(const unsigned id) {
 std::vector<acceso> BaseDatos::ObtenerRegistro(const unsigned id) const {
   std::vector<acceso> registro;
   for (const auto& acceso : accesos_)  {
-    if (acceso.usuario_.Id() == id || acceso.cerradura_.Id() == id) {
+    if (acceso.usuario_.GetId() == id || acceso.cerradura_.Id() == id) {
       registro.push_back(acceso);
     }
   }

@@ -12,9 +12,9 @@
  *           José Ramón Morera Campos, alu0101471846@ull.edu.es
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
  * @date    17/04/2023
- * @file    usuario.h
- * @brief   Declaración de la clase "Usuario", que permite registrar
- *          a los usuarios de la aplicación.
+ * @file    usuario.cc
+ * @brief   Definición de funciones de la clase "Usuario", que 
+ *          permite registrar a los usuarios de la aplicación.
  * @see
  *
  * Historial de revisiones
