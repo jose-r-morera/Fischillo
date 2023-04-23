@@ -21,6 +21,8 @@
  *          12/04/2023 - Creación (primera versión) del código
  */
 #include <iostream>
+#include <sstream>
+
 
 int main() {
   std::cout << "Hola, mundo!" << std::endl;

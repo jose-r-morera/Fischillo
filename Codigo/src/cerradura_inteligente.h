@@ -28,15 +28,16 @@
 
 class CerraduraInteligente {
  public:
-  CerraduraInteligente(const int id) id_(id) {}
+  CerraduraInteligente(const unsigned id) : id_(id) {}
 
-  void Interaccion() { estado_ = !estado_; }
-  bool Abierto() { return abierto_; }
-
-  int id() const { return id_; }
+  void Interaccion() { abierto_ = !abierto_; }
+  
+  /// Getters
+  bool Abierto() const { return abierto_; }
+  unsigned Id() const { return id_; }
 
  private:
-  int id_;
+  unsigned id_;
   bool abierto_{false};
 };
 

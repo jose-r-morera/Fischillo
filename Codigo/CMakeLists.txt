@@ -49,7 +49,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 # Add a new line for each new test file
 add_executable(runTests
     test/gtest_main.cc
-    test/test_smart_lock.cc)
+    test/test_cerradura_inteligente.cc)
 
 # Adds an executable target called "SmartLockApp" to be built from the source files listed in the command invocation.
 # Add a new line for each new .cc file

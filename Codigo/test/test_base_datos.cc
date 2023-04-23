@@ -6,7 +6,7 @@
 #include <sstream>
 #include <string>
 
-#include "../src/smart_lock_app.h"
+#include "../src/base_datos.h"
 
 std::stringstream stream_for_tests{};
 
