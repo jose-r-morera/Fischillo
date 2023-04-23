@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/SmartLockApp.dir/src/smart_lock_app.cc.o  -o SmartLockApp 
+/usr/bin/c++ -rdynamic CMakeFiles/SmartLockApp.dir/src/cliente.cc.o -o SmartLockApp 
