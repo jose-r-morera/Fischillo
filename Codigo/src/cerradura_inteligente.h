@@ -28,9 +28,9 @@
 
 class CerraduraInteligente {
  public:
-  CerraduraInteligente(const int id) id_(id) {}
+  CerraduraInteligente(const int id) : id_(id) {}
 
-  void Interaccion() { estado_ = !estado_; }
+  void Interaccion() { abierto_ = !abierto_; }
   bool Abierto() { return abierto_; }
 
   int id() const { return id_; }
