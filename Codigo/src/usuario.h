@@ -11,27 +11,41 @@
  *           Valerio Luis Cabrera, alu0101476049@ull.edu.es
  *           José Ramón Morera Campos, alu0101471846@ull.edu.es
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
- * @date    22/04/2023
- * @file    base_datos.h
- * @brief   Declaración de la clase "BaseDatos". Permite almacenar
- *          información.
- *
- *
+ * @date    17/04/2023
+ * @file    usuario.h
+ * @brief   Declaración de la clase "Usuario", que permite registrar
+ *          a los usuarios de la aplicación.
  * @see
  *
  * Historial de revisiones
- *          22/04/2023 - Creación (primera versión) del código
+ *          17/04/2023 - Creación (primera versión) del código
  */
 
-#ifndef USUARIO_H
-#define USUARIO_H
+#ifndef USER_H_
+#define USER_H_
+
+#include <vector>
 
 class Usuario {
  public:
-  unsigned Id() const { return id_; }
+  // Constructor por defecto
+  Usuario(int id, std::string nombre, bool admin = false) : id_usuario_(id), nombre_usuario_(nombre), administrador_(admin) {}
+  // Devuelve la ID del usuario
+  int id() const { return id_usuario_; }
+  // Asigna las cerraduras a las que tiene permitido el acceso el usuario
+  void PermitirAccesoCerradura(int id_cerradura_) { cerraduras_permitidas_.push_back(id_cerradura_); }
+  // Comprueba si el usuario tiene permisos de administrador
+  bool Administrador() { return administrador_; }
+  
  private:
-  unsigned id_;
+  // Identificador numérico del usuario
+  int id_usuario_;
+  // Identificador alfabético del usuario
+  std::string nombre_usuario_;
+  // Cerraduras a las que tiene acceso el usuario
+  std::vector<int> cerraduras_permitidas_;
+  // En caso de que el usuario tiene permisos de administrador
+  bool administrador_;
 };
- 
 
 #endif
