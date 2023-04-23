@@ -30,9 +30,6 @@
 #include <vector>
 #include <ctime>
 
-#include "usuario.h"
-#include "cerradura_inteligente.h"
-
 struct acceso {
   Usuario usuario;
   CerraduraInteligente cerradura;
@@ -85,7 +82,7 @@ bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
   return true;
 }
 
-bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
+bool BaseDatos::Insertar(const Usuario& nueva_cerradura) {
   // Comprueba que el id no se haya usado
   for (const auto usuario : usuarios_)  {
     if (usuario.id() == nuevo_usuario.id()) {
