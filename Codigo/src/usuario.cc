@@ -32,7 +32,7 @@ void Usuario::Serialize(std::ostream& os) const {
   os.write(reinterpret_cast<const char*>(&nombre_size), sizeof(nombre_size));
   os.write(nombre_usuario_.data(), nombre_size);
   
-  // Serialize contrasenya
+  // Serialize contrasenya_
   os.write(reinterpret_cast<const char*>(&contrasenya_), sizeof(contrasenya_));
 
   // Serialize cerraduras_permitidas_
@@ -52,6 +52,9 @@ void Usuario::Deserialize(std::istream& is)  {
   is.read(reinterpret_cast<char*>(&nombre_size), sizeof(nombre_size));
   nombre_usuario_.resize(nombre_size);
   is.read(&nombre_usuario_[0], nombre_size);
+
+  // Deserialize contrasenya_
+  is.read(reinterpret_cast<char*>(&contrasenya_), sizeof(contrasenya_));
 
   // Deserialize cerraduras_permitidas_
   std::size_t cerraduras_size;
