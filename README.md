@@ -1,7 +1,7 @@
 # SmartLock
 
 ## Conectarse a github desde el Centro de Cálculo
-Ejecuta en línea de comandos de **Visual Studio** `git clone https://github.com/jose-r-morera/SmartLock.git`
+Ejecuta en línea de comandos de **Visual Studio** `git clone https://github.com/jose-r-morera/Fischillo.git`
 
 ## Instalación de Suite Google Tests
 Para instalar GTEST, sigue los pasos del fichero **instalarGoogleTest.txt** con la terminal.
