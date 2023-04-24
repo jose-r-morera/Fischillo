@@ -79,7 +79,7 @@ class BaseDatos {
   // Buscar
   bool ExisteUsuario(const std::string& nombre_usuario) const;
   Usuario BuscarUsuario(const std::string& nombre_usuario) const;
-  
+
  private:
   // Personas 
   std::vector<Usuario> usuarios_{};

@@ -169,7 +169,7 @@ void InteractuarCerraduras(const BaseDatos& kBaseDeDatos, const std::string& kNo
   std::cout << GREEN << "Cerraduras del usuario: " << std::endl;
   Usuario usuario_actual = kBaseDeDatos.BuscarUsuario(kNombreUsuario);
 
-  for(usuario_actual.)
+  //for(usuario_actual.)
 }
 
 // /**
