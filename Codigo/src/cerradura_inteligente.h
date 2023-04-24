@@ -31,34 +31,26 @@
 
 class CerraduraInteligente {
  public:
-  CerraduraInteligente(const unsigned id = 0) : id_(id) {}
+  // Constructor
+  CerraduraInteligente(const unsigned id = 0, const std::string nombre = "") : id_(id), nombre_(nombre) {}
 
+  // Función para interactuar con la cerradura
   void Interaccion() { abierto_ = !abierto_; }
 
-   // Serialize function
-    void Serialize(std::ostream& os) const {
-        // Serialize id_
-        os.write(reinterpret_cast<const char*>(&id_), sizeof(id_));
-
-        // Serialize abierto_
-        os.write(reinterpret_cast<const char*>(&abierto_), sizeof(abierto_));
-    }
-
-    // Deserialize function
-    void Deserialize(std::istream& is) {
-        // Deserialize id_
-        is.read(reinterpret_cast<char*>(&id_), sizeof(id_));
-
-        // Deserialize abierto_
-        is.read(reinterpret_cast<char*>(&abierto_), sizeof(abierto_));
-    }
+  // Función de serialización
+  void Serialize(std::ostream& os) const;
+  
+  // Función de deserialización
+  void Deserialize(std::istream& is);
   
   /// Getters
-  bool Abierto() const { return abierto_; }
-  unsigned Id() const { return id_; }
+  bool Abierto()       const { return abierto_; }
+  unsigned Id()        const { return id_; }
+  std::string Nombre() const { return nombre_; }
 
  private:
   unsigned id_{};
+  std::string nombre_{""};
   bool abierto_{false};
 };
 

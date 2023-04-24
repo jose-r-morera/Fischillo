@@ -30,18 +30,19 @@ int main() {
   std::cout << "Programa para hacer cosas UwU" << std::endl;
   
   // Leemos la base de datos del fichero que la contiene
-  const std::string kFicheroBaseDatos{"base_datos.txt"}; 
+  const std::string kFicheroBaseDatos{"base.datos"}; 
   std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
   BaseDatos base_datos_leida{};
   base_datos_leida.Deserialize(ifs);
   ifs.close();
 
   /// El usuario se debe identificar
-  const unsigned kIdUsuario = Identificacion(base_datos_leida);
+  const std::string kIdUsuario = Identificacion(base_datos_leida);
 
+  // Mostramos el menú
   
   // Guardamos los cambios
-  std::ofstream ofs("base_datos.txt", std::ios::binary);
+  std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);
   // Serializamos la base de datos, guardandola en el fichero
   base_datos_leida.Serialize(ofs);
   // Cerrramos el fichero

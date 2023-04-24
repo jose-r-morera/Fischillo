@@ -162,13 +162,15 @@ bool BaseDatos::ExisteUsuario(const std::string& nombre_usuario) const {
 }
 
 
-const Usuario& BaseDatos::BuscarUsuario(const std::string& nombre_usuario) const {
+Usuario BaseDatos::BuscarUsuario(const std::string& nombre_usuario) const {
   if (ExisteUsuario(nombre_usuario)) {
+    Usuario mi_usuario;
     for (const auto& usuario : usuarios_) {
       if (usuario.GetNombreUsuario() == nombre_usuario) {
-        return usuario;
+        mi_usuario =  usuario;
       }
     }
+    return mi_usuario;
   } else {
     throw UsuarioNoExiste();
   }

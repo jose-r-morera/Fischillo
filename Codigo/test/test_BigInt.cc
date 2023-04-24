@@ -1,10 +1,8 @@
-#include <gtest/gtest.h>
-
-#include <cmath>
-#include <sstream>
-#include <string>
-
-#include "../src/BigInt.h"
+/***
+*
+* SOLO DE REFERENCIA
+*
+*/
 
 std::stringstream stream_for_tests{};
 

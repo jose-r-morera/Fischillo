@@ -78,7 +78,7 @@ class BaseDatos {
 
   // Buscar
   bool ExisteUsuario(const std::string& nombre_usuario) const;
-  const Usuario& BuscarUsuario(const std::string& nombre_usuario) const;
+  Usuario BuscarUsuario(const std::string& nombre_usuario) const;
   
  private:
   // Personas 
@@ -91,4 +91,4 @@ class BaseDatos {
   unsigned contador_id_{1000};
 };
 
-#endif
+#endif // BASE_DE_DATOS_H

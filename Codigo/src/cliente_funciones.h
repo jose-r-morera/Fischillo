@@ -28,16 +28,18 @@
 #include <fstream>
 
 #include "base_datos.h"
+#include "usuario.h"
 
 // Retorna la ID del usuario
-unsigned Identificacion(const BaseDatos& kBaseDeDatos);
+std::string Identificacion(BaseDatos& base_de_datos);
 
-bool Registrarse(const BaseDatos& kBaseDeDatos);
-
-bool IniciarSesion(const BaseDatos& kBaseDeDatos);
+// Opciones de identificación
+std::string Registrarse(BaseDatos& base_de_datos);
+std::string IniciarSesion(const BaseDatos& kBaseDeDatos);
 
 /// Opciones del menú de la app
-bool InteractuarCerraduras(const BaseDatos& kBaseDeDatos);
-bool ConcederAcceso(const BaseDatos& kBaseDeDatos, const Usuario& kUsuario);
+void InteractuarCerraduras(const BaseDatos& kBaseDeDatos, const std::string& kNombreUsuario);
+void GestionarCerraduras(const BaseDatos& kBaseDeDatos);
+void ConcederAcceso(const BaseDatos& kBaseDeDatos, const Usuario& kUsuario);
 
 #endif

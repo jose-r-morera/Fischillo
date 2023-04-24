@@ -21,9 +21,9 @@
 cmake_minimum_required(VERSION 3.1)  # Mandatory
 
 # set the project name 
-project(SmartLockApp              # Mandatory
-    VERSION 0.9
-    DESCRIPTION "Smartlock App"
+project(Fischillo              # Mandatory
+    VERSION 0.2
+    DESCRIPTION "App Fischillo"
     LANGUAGES CXX)
 
 # specify the C++ standard
@@ -49,17 +49,23 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 # Add a new line for each new test file
 add_executable(runTests
     test/gtest_main.cc
-    test/test_cerradura_inteligente.cc)
+    test/test_cerradura_inteligente.cc
+    test/test_base_datos.cc)
 
-# Adds an executable target called "SmartLockApp" to be built from the source files listed in the command invocation.
+# Adds an executable target called "fischillo" to be built from the source files listed in the command invocation.
 # Add a new line for each new .cc file
 
 # Añadir archivos de código (.cc) aquí:
-add_executable(SmartLockApp
+add_executable(fischillo
     src/cliente.cc
-    src/base_datos.cc)
+    src/cliente_funciones.cc
+    src/base_datos.cc
+    src/cerradura_inteligente.cc
+    src/usuario.cc)
 
 add_executable(funciona
+    src/cerradura_inteligente.cc
+    src/usuario.cc
     src/base_datos.cc
     src/funciona.cc)
     
@@ -70,6 +76,6 @@ target_compile_features(runTests PRIVATE cxx_std_17)
 
 # Add compile options to a target.
 target_compile_options(runTests PRIVATE -Wall -Wextra -Wpedantic -Weffc++)
-target_compile_options(SmartLockApp PRIVATE -Wall -Wextra -Wpedantic -Weffc++)
+target_compile_options(fischillo PRIVATE -Wall -Wextra -Wpedantic -Weffc++)
 
 set(CMAKE_SKIP_INSTALL_RULES True) # Avoids creating install data
