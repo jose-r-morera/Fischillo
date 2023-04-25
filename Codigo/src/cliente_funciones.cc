@@ -28,7 +28,7 @@
 // Retorna la ID del usuario
 std::string Identificacion(BaseDatos& base_de_datos) {
   system("clear");
-  std::cout << GREEN << "Bienvenido a Smartlock\n\n";
+  std::cout << GREEN << "Bienvenido a Smartlock\n\n" << RESET;
 
   char opcion{};
   std::string nombre_usuario{""};
@@ -100,7 +100,7 @@ std::string Registrarse(BaseDatos& base_de_datos) {
     if (nuevo_nombre_usuario == kPalabraSalir) {
       std::cout << "Saliendo" << std::endl;
       sleep(2);
-      return 0;
+      return "";
 
     } else if (base_de_datos.ExisteUsuario(nuevo_nombre_usuario)) {
       std::cout << RED << "El usuario ya existe\n";
@@ -134,7 +134,7 @@ std::string IniciarSesion(const BaseDatos& kBaseDeDatos) {
     if (nombre_usuario == kPalabraSalir) {
       std::cout << "Saliendo" << std::endl;
       sleep(2);
-      return 0;
+      return "";
     }
     existe_usuario = true;
     try {
@@ -154,7 +154,7 @@ std::string IniciarSesion(const BaseDatos& kBaseDeDatos) {
     return usuario.GetNombreUsuario();
   } else {
     std::cout << RED << "Contraseña incorrecta\n";
-    return 0;
+    return "";
   }
 }
 
