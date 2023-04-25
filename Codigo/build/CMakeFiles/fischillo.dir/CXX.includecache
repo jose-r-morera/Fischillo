@@ -7,36 +7,34 @@
 #IncludeRegexTransform: 
 
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+ctime
+-
 iostream
 -
 vector
 -
-ctime
--
-usuario.h
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 cerradura_inteligente.h
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
 excepcion.h
 /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
+usuario.h
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
-iostream
--
 fstream
+-
+iostream
 -
 
-/home/jr/Desktop/SmartLock/Codigo/src/cliente.cc
-fstream
--
-iostream
--
-base_datos.h
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc
 cliente_funciones.h
 /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
 colores.h
 /home/jr/Desktop/SmartLock/Codigo/src/colores.h
+unistd.h
+-
+iostream
+-
 
 /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
 string
@@ -51,16 +49,16 @@ iostream
 -
 
 /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
-iostream
--
 exception
+-
+iostream
 -
 
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
-vector
+fstream
 -
 iostream
 -
-fstream
+vector
 -
 

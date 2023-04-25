@@ -86,10 +86,10 @@ std::string Registrarse(BaseDatos& base_de_datos) {
   // solicite salir
   const std::string kPalabraSalir{"salir"};
   bool nombre_valido{false};
+  std::string nuevo_nombre_usuario{""};
   while (!nombre_valido) {
     std::cout << "Introduzca un nombre de usuario.\n"
               << "Escriba \"" << kPalabraSalir << "\" para volver al menú de inicio de sesión.\n";
-    std::string nuevo_nombre_usuario{""};
     std::cin >> nuevo_nombre_usuario;
 
     if (nuevo_nombre_usuario == kPalabraSalir) {
@@ -106,7 +106,7 @@ std::string Registrarse(BaseDatos& base_de_datos) {
 
   const std::string kContrasenya = IntroducirContrasenya();
   // Creamos el usuario
-  Usuario nuevo_usuario{base_de_datos.NuevoId(), kContrasenya};
+  Usuario nuevo_usuario{base_de_datos.NuevoId(), nuevo_nombre_usuario, kContrasenya};
   base_de_datos.Insertar(nuevo_usuario);
 
   std::cout << LGREEN << "Usuario registrado correctamente\n";

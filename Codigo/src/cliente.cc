@@ -36,8 +36,6 @@ int main() {
   std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
   BaseDatos base_datos_leida{};
   base_datos_leida.Deserialize(ifs);
-
-  std::cout << "Funciona deserializar" << std::endl;
   ifs.close();
 
   /// El usuario se debe identificar
