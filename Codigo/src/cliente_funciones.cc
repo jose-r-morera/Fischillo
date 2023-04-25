@@ -22,10 +22,12 @@
  */
 
 #include "cliente_funciones.h"
-#include "colores.h"
 
-#include <unistd.h>  // para poder usar sleep
+#include <unistd.h>  // para poder usar sleep y ocultar contraseña
+
 #include <iostream>
+
+#include "colores.h"
 
 // Retorna la ID del usuario
 std::string Identificacion(BaseDatos& base_de_datos) {
@@ -63,13 +65,14 @@ std::string IntroducirContrasenya() {
   bool contrasenya_valida{false};
 
   while (!contrasenya_valida) {
-    std::cout << "Introduzca una contraseña: ";
-    std::cin >> nueva_contrasenya;
-    if (nueva_contrasenya.length() < kTamanyoMinContrasenya) {
+    nueva_contrasenya = getpass("Introduzca su contraseña: ");
+
+    if (nueva_contrasenya.length() > kTamanyoMinContrasenya) {
       contrasenya_valida = true;
     } else {
-      std::cout << "Contraseña poco segura. Debe tener más de " << kTamanyoMinContrasenya
-                << " caracteres. \n\n";
+      std::cout << RED << "Contraseña poco segura. Debe tener más de " << kTamanyoMinContrasenya
+                << " caracteres. \n\n"
+                << RESET << std::endl;
     }
   }
   return nueva_contrasenya;
@@ -89,16 +92,16 @@ std::string Registrarse(BaseDatos& base_de_datos) {
   std::string nuevo_nombre_usuario{""};
   while (!nombre_valido) {
     std::cout << "Introduzca un nombre de usuario.\n"
-              << "Escriba \"" << kPalabraSalir << "\" para volver al menú de inicio de sesión.\n";
+              << "Escriba \"" << kPalabraSalir << "\" para volver al menú de inicio de sesión.\n\n";
     std::cin >> nuevo_nombre_usuario;
 
     if (nuevo_nombre_usuario == kPalabraSalir) {
       std::cout << "Saliendo" << std::endl;
-      sleep(2);
+      sleep(1);
       return "";
 
     } else if (base_de_datos.ExisteUsuario(nuevo_nombre_usuario)) {
-      std::cout << RED << "El usuario ya existe\n";
+      std::cout << RED << "El usuario ya existe\n" << RESET;
     } else {
       nombre_valido = true;
     }
@@ -110,6 +113,7 @@ std::string Registrarse(BaseDatos& base_de_datos) {
   base_de_datos.Insertar(nuevo_usuario);
 
   std::cout << LGREEN << "Usuario registrado correctamente\n";
+  sleep(2);
   return nuevo_usuario.GetNombreUsuario();
 }
 
@@ -128,27 +132,27 @@ std::string IniciarSesion(const BaseDatos& kBaseDeDatos) {
     std::cin >> nombre_usuario;
     if (nombre_usuario == kPalabraSalir) {
       std::cout << "Saliendo" << std::endl;
-      sleep(2);
+      sleep(1);
       return "";
     }
     existe_usuario = true;
     try {
       usuario = kBaseDeDatos.BuscarUsuario(nombre_usuario);
     } catch (BaseDatosExcepcion& excepcion) {
-      std::cerr << excepcion.what() << std::endl;
+      std::cerr << RED << excepcion.what() << RESET << std::endl;
       existe_usuario = false;
     }
   } while (!existe_usuario);
-  std::cout << "Introduzca su contraseña: ";
-  std::cin >> contrasenya;
+  contrasenya = getpass("Introduzca su contraseña: ");
   if (usuario.ConfirmarContrasenya(contrasenya)) {
     std::cout << GREEN << "Iniciando sesión...\n";
-    // esperamos 2 segundos
+    sleep(2);  // esperamos 2 segundos
+    std::cout << LGREEN << "Inicio de sesión correcto\n" << RESET;
     sleep(2);
-    std::cout << LGREEN << "Inicio de sesión correcto\n";
     return usuario.GetNombreUsuario();
   } else {
-    std::cout << RED << "Contraseña incorrecta\n";
+    std::cout << RED << "Contraseña incorrecta\n" << RESET;
+    sleep(2);
     return "";
   }
 }

@@ -29,12 +29,12 @@ iostream
 /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc
 cliente_funciones.h
 /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
-colores.h
-/home/jr/Desktop/SmartLock/Codigo/src/colores.h
 unistd.h
 -
 iostream
 -
+colores.h
+/home/jr/Desktop/SmartLock/Codigo/src/colores.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
 string
