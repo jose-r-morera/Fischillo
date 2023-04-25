@@ -32,6 +32,14 @@ iostream
 exception
 -
 
+/home/jr/Desktop/SmartLock/Codigo/src/funciona.cc
+fstream
+-
+iostream
+-
+base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 vector
 -
@@ -39,16 +47,4 @@ iostream
 -
 fstream
 -
-
-/home/jr/Desktop/SmartLock/Codigo/test/test_base_datos.cc
-gtest/gtest.h
--
-cmath
--
-sstream
--
-string
--
-../src/base_datos.h
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
 

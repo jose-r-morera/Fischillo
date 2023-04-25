@@ -20,56 +20,57 @@
  * Historial de revisiones
  *          12/04/2023 - Creación (primera versión) del código
  */
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 #include "base_datos.h"
 
 int main() {
-  std::cout << "Hola, mundo!" << std::endl;
-  
   // Leemos la base de datos del fichero que la contiene
-  std::ifstream ifs("base_datos.txt", std::ios::binary);
+  const std::string kFicheroBaseDatos{"base.datos"};
+  std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
   BaseDatos base_datos_leida{};
-  base_datos_leida.Deserialize(ifs);
+  base_datos_leida.Deserialize(ifs);  // Comentar para crear de cero
   ifs.close();
 
   std::cout << "¿Qué quieres hacer?\n"
-  "a) Añadir usuario\n"
-  "b) Eliminar usuario\n";
+               "a) Ver usuarios\n"
+               "b) Añadir usuario\n"
+               "c) Eliminar usuario\n";
   char opcion{};
   std::cin >> opcion;
 
-  switch(opcion) {
-    case 'a': { 
+  switch (opcion) {
+    case 'a': {
+      /// Vemos los usuarios existentes
+      // Se muestran siempre xd
+    } break;
+
+    case 'b': {
       /// Creamos un usuario
       std::string nombre_introducido;
       std::cout << "Introduce nombre de usuario: ";
       std::cin >> nombre_introducido;
       base_datos_leida.Insertar(Usuario{base_datos_leida.NuevoId(), nombre_introducido});
-    }
-    break;
+    } break;
 
-    case 'b': {
+    case 'c': {
       // Eliminamos un usuario
       unsigned id_eliminar;
       std::cout << "Introduce id del usuario a eliminar: ";
       std::cin >> id_eliminar;
       base_datos_leida.EliminarUsuario(id_eliminar);
-    }
-    break;
-  } 
+    } break;
+  }
 
   std::vector<Usuario> usuarios = base_datos_leida.GetUsuarios();
   for (const auto& usuario : usuarios) {
     std::cout << usuario.GetId() << " : " << usuario.GetNombreUsuario() << std::endl;
   }
-  // Usuario platinita{base_datos_leida.NuevoId(), "platinita"};
-  // base_datos_leida.Insertar(platinita);
 
   // Open a file for writing
-  std::ofstream ofs("base_datos.txt", std::ios::binary);
-  // Serialize the object to the file 
+  std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);
+  // Serialize the object to the file
   base_datos_leida.Serialize(ofs);
   // Close the file
   ofs.close();

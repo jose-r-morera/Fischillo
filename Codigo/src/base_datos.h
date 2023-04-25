@@ -26,20 +26,18 @@
 #ifndef BASE_DE_DATOS_H
 #define BASE_DE_DATOS_H
 
+#include <ctime>
 #include <iostream>
 #include <vector>
-#include <ctime>
 
-#include "usuario.h"
 #include "cerradura_inteligente.h"
 #include "excepcion.h"
+#include "usuario.h"
 
 struct acceso {
   acceso() {}
-  acceso(const Usuario& usuario, const CerraduraInteligente& cerradura,
-         const std::string& accion) : usuario_{usuario}, 
-                                      cerradura_{cerradura}, 
-                                      accion_{accion} {
+  acceso(const Usuario& usuario, const CerraduraInteligente& cerradura, const std::string& accion)
+      : usuario_{usuario}, cerradura_{cerradura}, accion_{accion} {
     time(&time_);
   }
   Usuario usuario_{};
@@ -55,7 +53,7 @@ class BaseDatos {
   bool Insertar(const Usuario& nuevo_usuario);
   bool Insertar(const CerraduraInteligente& nueva_cerradura);
   bool Insertar(const acceso& nuevo_acceso);
-  
+
   bool EliminarUsuario(const unsigned id);
   bool EliminarCerradura(const unsigned id);
 
@@ -81,7 +79,7 @@ class BaseDatos {
   Usuario BuscarUsuario(const std::string& nombre_usuario) const;
 
  private:
-  // Personas 
+  // Personas
   std::vector<Usuario> usuarios_{};
   // Cerraduras
   std::vector<CerraduraInteligente> cerraduras_{};
@@ -91,4 +89,4 @@ class BaseDatos {
   unsigned contador_id_{1000};
 };
 
-#endif // BASE_DE_DATOS_H
+#endif  // BASE_DE_DATOS_H

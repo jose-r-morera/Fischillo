@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/runTests.dir/test/gtest_main.cc.o CMakeFiles/runTests.dir/test/test_cerradura_inteligente.cc.o CMakeFiles/runTests.dir/test/test_base_datos.cc.o -o runTests  /usr/local/lib/libgtest.a -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/runTests.dir/test/gtest_main.cc.o CMakeFiles/runTests.dir/test/test_cerradura_inteligente.cc.o CMakeFiles/runTests.dir/test/test_base_datos.cc.o  -o runTests  /usr/local/lib/libgtest.a -lpthread -lpthread 

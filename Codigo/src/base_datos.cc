@@ -127,7 +127,6 @@ void BaseDatos::Deserialize(std::istream& is) {
   usuarios_.resize(usuarios_size);
   for (auto& usuario : usuarios_) {
     // Deserialize each Usuario object
-    // Note: implement deserialize() function for Usuario class
     usuario.Deserialize(is);
   }
 
@@ -137,7 +136,6 @@ void BaseDatos::Deserialize(std::istream& is) {
   cerraduras_.resize(cerraduras_size);
   for (auto& cerradura : cerraduras_) {
     // Deserialize each CerraduraInteligente object
-    // Note: implement deserialize() function for CerraduraInteligente class
     cerradura.Deserialize(is);
   }
 

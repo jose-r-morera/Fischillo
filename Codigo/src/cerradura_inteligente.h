@@ -26,26 +26,27 @@
 #ifndef CERRADURA_INTELIGENTE_H
 #define CERRADURA_INTELIGENTE_H
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 class CerraduraInteligente {
  public:
   // Constructor
-  CerraduraInteligente(const unsigned id = 0, const std::string nombre = "") : id_(id), nombre_(nombre) {}
+  CerraduraInteligente(const unsigned id = 0, const std::string nombre = "")
+      : id_(id), nombre_(nombre) {}
 
   // Función para interactuar con la cerradura
   void Interaccion() { abierto_ = !abierto_; }
 
   // Función de serialización
   void Serialize(std::ostream& os) const;
-  
+
   // Función de deserialización
   void Deserialize(std::istream& is);
-  
+
   /// Getters
-  bool Abierto()       const { return abierto_; }
-  unsigned Id()        const { return id_; }
+  bool Abierto() const { return abierto_; }
+  unsigned Id() const { return id_; }
   std::string Nombre() const { return nombre_; }
 
  private:

@@ -24,28 +24,38 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
-#include <vector>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <vector>
 
 class Usuario {
  public:
   // Constructor por defecto
   Usuario() : id_usuario_{0}, nombre_usuario_{""}, contrasenya_{}, administrador_{false} {}
   // Constructor por parámetros
-  Usuario(unsigned id, std::string nombre, std::string contrasenya = "", bool admin = false) : id_usuario_(id), nombre_usuario_(nombre), contrasenya_(std::hash<std::string>{}(contrasenya)), administrador_(admin) {}
+  Usuario(unsigned id, std::string nombre, std::string contrasenya = "", bool admin = false)
+      : id_usuario_(id),
+        nombre_usuario_(nombre),
+        contrasenya_(std::hash<std::string>{}(contrasenya)),
+        administrador_(admin) {}
   // Devuelve la ID del usuario
   unsigned GetId() const { return id_usuario_; }
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
-  void PermitirAccesoCerradura(unsigned id_cerradura) { cerraduras_permitidas_.push_back(id_cerradura); }
+  void PermitirAccesoCerradura(unsigned id_cerradura) {
+    cerraduras_permitidas_.push_back(id_cerradura);
+  }
   // Comprueba si el usuario tiene permisos de administrador
   bool EsAdministrador() const { return administrador_; }
   // Devuelve el nombre del usuario
   std::string GetNombreUsuario() const { return nombre_usuario_; }
   // Comprueba si la contraseña introducida es correcta
-  bool ConfirmarContrasenya(std::string contrasenya_introducida) const { return ( std::hash<std::string>{}(contrasenya_introducida) == contrasenya_ ); }
+  bool ConfirmarContrasenya(std::string contrasenya_introducida) const {
+    return (std::hash<std::string>{}(contrasenya_introducida) == contrasenya_);
+  }
   // Almacenamos la contraseña en contrasenya_
-  void SetContrasenya(std::string contrasenya) { contrasenya_ = std::hash<std::string>{}(contrasenya); }
+  void SetContrasenya(std::string contrasenya) {
+    contrasenya_ = std::hash<std::string>{}(contrasenya);
+  }
 
   void Serialize(std::ostream& os) const;
   void Deserialize(std::istream& is);
@@ -63,4 +73,4 @@ class Usuario {
   bool administrador_;
 };
 
-#endif // USUARIO_H
+#endif  // USUARIO_H

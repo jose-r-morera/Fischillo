@@ -20,27 +20,32 @@
  * Historial de revisiones
  *          12/04/2023 - Creación (primera versión) del código
  */
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 #include "base_datos.h"
 #include "cliente_funciones.h"
+#include "colores.h"
 
 int main() {
-  std::cout << "Programa para hacer cosas UwU" << std::endl;
-  
+  system("clear");
+  std::cout << GREEN << "Bienvenido a Smartlock\n\n" << RESET;
+
   // Leemos la base de datos del fichero que la contiene
-  const std::string kFicheroBaseDatos{"base.datos"}; 
+  const std::string kFicheroBaseDatos{"base.datos"};
   std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
   BaseDatos base_datos_leida{};
   base_datos_leida.Deserialize(ifs);
+
+  std::cout << "Funciona deserializar" << std::endl;
   ifs.close();
 
   /// El usuario se debe identificar
   const std::string kIdUsuario = Identificacion(base_datos_leida);
 
   // Mostramos el menú
-  
+  // ToDo
+
   // Guardamos los cambios
   std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);
   // Serializamos la base de datos, guardandola en el fichero

@@ -21,11 +21,10 @@
  *          12/04/2023 - Creación (primera versión) del código
  */
 
-#ifndef  CLIENTE_FUNCIONES_H
-#define  CLIENTE_FUNCIONES_H
+#ifndef CLIENTE_FUNCIONES_H
+#define CLIENTE_FUNCIONES_H
 
-#include <iostream>
-#include <fstream>
+#include <string>
 
 #include "base_datos.h"
 #include "usuario.h"

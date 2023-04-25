@@ -22,6 +22,9 @@
  *          24/04/2023 - Creación (primera versión) del código
  */
 
+#ifndef COLORES_H
+#define COLORES_H
+
 #include <iostream>
 
 // COLOR DE LA FUENTE // 
@@ -56,3 +59,5 @@
 #define BG_LGREEN  "\x1B[48;2;17;245;120m"
 #define BG_GRAY    "\x1B[48;2;176;174;174m"
 #define BG_ROSE    "\x1B[48;2;255;151;203m"
+
+#endif // COLORES_H

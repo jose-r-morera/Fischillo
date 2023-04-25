@@ -31,7 +31,7 @@ void Usuario::Serialize(std::ostream& os) const {
   std::size_t nombre_size = nombre_usuario_.size();
   os.write(reinterpret_cast<const char*>(&nombre_size), sizeof(nombre_size));
   os.write(nombre_usuario_.data(), nombre_size);
-  
+
   // Serialize contrasenya_
   os.write(reinterpret_cast<const char*>(&contrasenya_), sizeof(contrasenya_));
 
@@ -43,7 +43,7 @@ void Usuario::Serialize(std::ostream& os) const {
   os.write(reinterpret_cast<const char*>(&administrador_), sizeof(administrador_));
 }
 
-void Usuario::Deserialize(std::istream& is)  {
+void Usuario::Deserialize(std::istream& is) {
   // Deserialize id_usuario_
   is.read(reinterpret_cast<char*>(&id_usuario_), sizeof(id_usuario_));
 

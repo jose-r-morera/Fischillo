@@ -25,31 +25,15 @@
 #ifndef EXCEPCION_H
 #define EXCEPCION_H
 
-#include <iostream>
 #include <exception>
+#include <iostream>
 
 struct BaseDatosExcepcion : public std::exception {
-  const char* what() const noexcept {
-    return "Error detectado en el uso de la base de datos.";
-  }
+  const char* what() const noexcept { return "Error detectado en el uso de la base de datos."; }
 };
 
 struct UsuarioNoExiste : public BaseDatosExcepcion {
-  const char* what() const noexcept {
-    return "El nombre de usuario introducido no existe.";
-  }
+  const char* what() const noexcept { return "El nombre de usuario introducido no existe."; }
 };
-
-// struct BigIntDivisionByZero : public BigIntException {
-//   const char* what() const noexcept {
-//     return "División inválida, tratando de dividir entre 0.";
-//   }
-// };
-
-// struct BigIntBaseNotImplemented : public BigIntException {
-//   const char* what() const noexcept {
-//     return "La base introducida no se encuentra disponible.";
-//   }
-// };
 
 #endif
