@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
+base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
 ctime
 -
@@ -39,6 +43,10 @@ iostream
 -
 base_datos.h
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.cc
+usuario.h
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 fstream
