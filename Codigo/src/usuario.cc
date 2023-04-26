@@ -23,6 +23,24 @@
 
 #include "usuario.h"
 
+/**
+ * @brief Asigna las cerraduras a las que tiene permitido el acceso el usuario
+ */
+void Usuario::PermitirAccesoCerradura(unsigned id_cerradura) {
+  // Se utiliza un booleano que compruebe si la id ya pertenece al vector de accesos del usuario
+  bool pertenece{false};
+  for (unsigned i = 0; i < cerraduras_permitidas_.size(); i++) {
+    if (GetCerradurasPermitidasAt(i) == id_cerradura) {
+      pertenece = true;
+      break;
+    }
+  } 
+  // Si el Id no está registrado, se asigna su acceso al usuario
+  if (pertenece == false) {
+    cerraduras_permitidas_.push_back(id_cerradura);
+  }
+}
+
 void Usuario::Serialize(std::ostream& os) const {
   // Serialize nombre_usuario_
   std::size_t nombre_size = nombre_usuario_.size();

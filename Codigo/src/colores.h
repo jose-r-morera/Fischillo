@@ -42,9 +42,11 @@
 #define LGREEN  "\x1B[38;2;17;245;120m"
 #define GRAY    "\x1B[38;2;176;174;174m"
 #define PURPLE  "\x1B[38;2;128;0;128m"
+#define PINK    "\x1B[38;2;255;192;203m"
 #define RESET   "\x1b[0m"
 #define BOLD    "\x1b[1m"
 #define UNDERLINE "\x1b[4m"
+#define ITALIC "\x1b[3m"
 
 // COLOR DEL FONDO //
 #define BG_BLACK   "\x1B[40m"

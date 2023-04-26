@@ -26,8 +26,21 @@
 #include "base_datos.h"
 
 int main() {
-  // Leemos la base de datos del fichero que la contiene
   const std::string kFicheroBaseDatos{"base.datos"};
+  std::cout << "Escriba 'a' para rehacer base de datos" << std::endl;
+  std::string entrada{};
+  std::cin >> entrada;
+  if (entrada == "a") {
+    BaseDatos base_datos_nueva{};
+    // Open a file for writing
+    std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);
+    // Serialize the object to the file
+    base_datos_nueva.Serialize(ofs);
+    // Close the file
+    ofs.close();
+  }
+
+  // Leemos la base de datos del fichero que la contiene
   std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
   BaseDatos base_datos_leida{};
   base_datos_leida.Deserialize(ifs);  // Comentar para crear de cero
@@ -65,7 +78,7 @@ int main() {
 
   std::vector<Usuario> usuarios = base_datos_leida.GetUsuarios();
   for (const auto& usuario : usuarios) {
-    std::cout << usuario.GetNombreUsuario() << std::endl;
+    std::cout << usuario.GetNombreUsuario() << "Admin" << usuario.EsAdministrador() << std::endl;
   }
 
   // Open a file for writing

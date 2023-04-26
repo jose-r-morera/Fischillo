@@ -33,10 +33,8 @@
 class Usuario {
  public:
   //  **Constructores**:
-
   // Constructor por defecto
   Usuario() : nombre_usuario_{""}, contrasenya_{}, administrador_{false} {}
-
   // Constructor por parámetros
   Usuario(std::string nombre, std::string contrasenya = "", bool admin = false) :
     nombre_usuario_(nombre),
@@ -44,39 +42,29 @@ class Usuario {
     administrador_(admin) {}
   
   //  **Getters**:
-
   // Devuelve el nombre del usuario
   std::string GetNombreUsuario() const { return nombre_usuario_; }
-
   // Devuelve las cerraduras a las que tiene acceso el usuario
   std::vector<unsigned> GetCerradurasPermitidas() const { return cerraduras_permitidas_; }
   unsigned GetCerradurasPermitidasAt(int i) const { return cerraduras_permitidas_[i]; }
 
   //  **Setters**:
-
   // Almacenamos la contraseña en contrasenya_
   void SetContrasenya(std::string contrasenya) {
     contrasenya_ = std::hash<std::string>{}(contrasenya);
   }
 
   //  **Otras funciones**:
-
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
-  void PermitirAccesoCerradura(unsigned id_cerradura) { 
-    cerraduras_permitidas_.push_back(id_cerradura);
-  }
-
+  void PermitirAccesoCerradura(unsigned id_cerradura);
   // Comprueba si el usuario tiene permisos de administrador
   bool EsAdministrador() const { return administrador_; }
-  
   // Comprueba si la contraseña introducida es correcta
   bool ConfirmarContrasenya(std::string contrasenya_introducida) const {
     return (std::hash<std::string>{}(contrasenya_introducida) == contrasenya_);
   }
-
   // Almacena cada uno de los datos introducidos, modificando su formato de entrada
   void Serialize(std::ostream& os) const;
-
   // Devuelve el formato original a los datos del usuario
   void Deserialize(std::istream& is);
 
