@@ -1,9 +1,8 @@
-CMakeFiles/fischillo.dir/src/usuario.cc.o: \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.cc \
- /usr/include/stdc-predef.h \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h \
- /usr/include/c++/11/fstream /usr/include/c++/11/istream \
- /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
+CMakeFiles/funciona.dir/src/funciona.cc.o: \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/funciona.cc \
+ /usr/include/stdc-predef.h /usr/include/c++/11/fstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -151,8 +150,12 @@ CMakeFiles/fischillo.dir/src/usuario.cc.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/iostream \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.h \
+ /usr/include/c++/11/ctime /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/excepcion.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h

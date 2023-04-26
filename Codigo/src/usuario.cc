@@ -24,9 +24,6 @@
 #include "usuario.h"
 
 void Usuario::Serialize(std::ostream& os) const {
-  // Serialize id_usuario_
-  os.write(reinterpret_cast<const char*>(&id_usuario_), sizeof(id_usuario_));
-
   // Serialize nombre_usuario_
   std::size_t nombre_size = nombre_usuario_.size();
   os.write(reinterpret_cast<const char*>(&nombre_size), sizeof(nombre_size));
@@ -44,9 +41,6 @@ void Usuario::Serialize(std::ostream& os) const {
 }
 
 void Usuario::Deserialize(std::istream& is) {
-  // Deserialize id_usuario_
-  is.read(reinterpret_cast<char*>(&id_usuario_), sizeof(id_usuario_));
-
   // Deserialize nombre_usuario_
   std::size_t nombre_size;
   is.read(reinterpret_cast<char*>(&nombre_size), sizeof(nombre_size));

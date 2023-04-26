@@ -51,21 +51,21 @@ int main() {
       std::string nombre_introducido;
       std::cout << "Introduce nombre de usuario: ";
       std::cin >> nombre_introducido;
-      base_datos_leida.Insertar(Usuario{base_datos_leida.NuevoId(), nombre_introducido});
+      base_datos_leida.Insertar(Usuario{nombre_introducido, "1234"});
     } break;
 
     case 'c': {
       // Eliminamos un usuario
-      unsigned id_eliminar;
-      std::cout << "Introduce id del usuario a eliminar: ";
-      std::cin >> id_eliminar;
-      base_datos_leida.EliminarUsuario(id_eliminar);
+      std::string nombre_usuario_eliminar;
+      std::cout << "Introduce nombre del usuario a eliminar: ";
+      std::cin >> nombre_usuario_eliminar;
+      base_datos_leida.EliminarUsuario(nombre_usuario_eliminar);
     } break;
   }
 
   std::vector<Usuario> usuarios = base_datos_leida.GetUsuarios();
   for (const auto& usuario : usuarios) {
-    std::cout << usuario.GetId() << " : " << usuario.GetNombreUsuario() << std::endl;
+    std::cout << usuario.GetNombreUsuario() << std::endl;
   }
 
   // Open a file for writing

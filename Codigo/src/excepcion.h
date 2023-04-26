@@ -36,4 +36,8 @@ struct UsuarioNoExiste : public BaseDatosExcepcion {
   const char* what() const noexcept { return "El nombre de usuario introducido no existe."; }
 };
 
+struct CerraduraNoExiste : public BaseDatosExcepcion {
+  const char* what() const noexcept { return "La Id de cerradura introducida no existe."; }
+};
+
 #endif

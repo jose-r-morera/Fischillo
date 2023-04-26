@@ -43,6 +43,7 @@ int main() {
 
   // Mostramos el menú
   // ToDo
+  InteractuarCerraduras(base_datos_leida, kIdUsuario);
 
   // Guardamos los cambios
   std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);

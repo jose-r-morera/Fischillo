@@ -1,4 +1,4 @@
-CMakeFiles/fischillo.dir/src/usuario.cc.o: \
+CMakeFiles/funciona.dir/src/usuario.cc.o: \
  /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.cc \
  /usr/include/stdc-predef.h \
  /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h \

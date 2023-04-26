@@ -25,15 +25,17 @@
 
 #include "base_datos.h"
 
+/**
+ * @brief 
+ * 
+ * @param nuevo_usuario 
+ * @return true 
+ * @return false 
+ */
 bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
   // Comprueba que el id no se haya usado
   for (const auto& usuario : usuarios_)  {
-    if (usuario.GetId() == nuevo_usuario.GetId()) {
-      return false;
-    }
-  }
-  for (const auto& cerradura : cerraduras_)  {
-    if (cerradura.Id() == nuevo_usuario.GetId()) {
+    if (usuario.GetNombreUsuario() == nuevo_usuario.GetNombreUsuario()) {
       return false;
     }
   }
@@ -43,11 +45,6 @@ bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
 
 bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
   // Comprueba que el id no se haya usado
-  for (const auto& usuario : usuarios_)  {
-    if (usuario.GetId() == nueva_cerradura.Id()) {
-      return false;
-    }
-  }
   for (const auto& cerradura : cerraduras_)  {
     if (cerradura.Id() == nueva_cerradura.Id()) {
       return false;
@@ -62,9 +59,9 @@ bool BaseDatos::Insertar(const acceso& nuevo_acceso) {
   return true;
 }
 
-bool BaseDatos::EliminarUsuario(const unsigned id) {
+bool BaseDatos::EliminarUsuario(const std::string& nombre_usuario) {
   for (int i{0}; i < NumeroDeUsuarios(); ++i) {
-    if (usuarios_[i].GetId() == id) {
+    if (usuarios_[i].GetNombreUsuario() == nombre_usuario) {
       usuarios_.erase(usuarios_.begin() + i);
       return true;
     }
@@ -85,7 +82,17 @@ bool BaseDatos::EliminarCerradura(const unsigned id) {
 std::vector<acceso> BaseDatos::ObtenerRegistro(const unsigned id) const {
   std::vector<acceso> registro;
   for (const auto& acceso : accesos_)  {
-    if (acceso.usuario_.GetId() == id || acceso.cerradura_.Id() == id) {
+    if (acceso.cerradura_.Id() == id) {
+      registro.push_back(acceso);
+    }
+  }
+  return registro;
+}
+
+std::vector<acceso> BaseDatos::ObtenerRegistro(const std::string& nombre) const {
+  std::vector<acceso> registro;
+  for (const auto& acceso : accesos_)  {
+    if (acceso.usuario_.GetNombreUsuario() == nombre || acceso.cerradura_.Nombre() == nombre) {
       registro.push_back(acceso);
     }
   }
@@ -160,16 +167,54 @@ bool BaseDatos::ExisteUsuario(const std::string& nombre_usuario) const {
 }
 
 
-Usuario BaseDatos::BuscarUsuario(const std::string& nombre_usuario) const {
+const Usuario& BaseDatos::BuscarUsuario(const std::string& nombre_usuario) const {
   if (ExisteUsuario(nombre_usuario)) {
     Usuario mi_usuario;
     for (const auto& usuario : usuarios_) {
       if (usuario.GetNombreUsuario() == nombre_usuario) {
-        mi_usuario =  usuario;
+        return usuario;
       }
     }
-    return mi_usuario;
+    throw UsuarioNoExiste();
   } else {
     throw UsuarioNoExiste();
+  }
+}
+
+Usuario& BaseDatos::BuscarUsuario(const std::string& nombre_usuario) {
+  if (ExisteUsuario(nombre_usuario)) {
+    for (auto& usuario : usuarios_) {
+      if (usuario.GetNombreUsuario() == nombre_usuario) {
+        return usuario;
+      }
+    }
+    throw UsuarioNoExiste();
+  } else {
+    throw UsuarioNoExiste();
+  }
+}
+
+
+bool BaseDatos::ExisteCerradura(const unsigned id) const {
+  for (const auto& cerradura : cerraduras_) {
+    if (cerradura.Id() == id) {
+      return true;
+    }
+  }
+  return false;
+}
+
+
+CerraduraInteligente& BaseDatos::BuscarCerradura(const unsigned id) {
+  if (ExisteCerradura(id)) {
+    CerraduraInteligente cerradura_buscada;
+    for (auto& cerradura : cerraduras_) {
+      if (cerradura.Id() == id) {
+        return cerradura;
+      }
+    }
+    throw CerraduraNoExiste();
+  } else {
+    throw CerraduraNoExiste();
   }
 }

@@ -37,7 +37,8 @@ std::string Registrarse(BaseDatos& base_de_datos);
 std::string IniciarSesion(const BaseDatos& kBaseDeDatos);
 
 /// Opciones del menú de la app
-void InteractuarCerraduras(const BaseDatos& kBaseDeDatos, const std::string& kNombreUsuario);
+void MostrarMenu();
+void InteractuarCerraduras(BaseDatos& base_datos, const std::string& kNombreUsuario);
 void GestionarCerraduras(const BaseDatos& kBaseDeDatos);
 void ConcederAcceso(const BaseDatos& kBaseDeDatos, const Usuario& kUsuario);
 

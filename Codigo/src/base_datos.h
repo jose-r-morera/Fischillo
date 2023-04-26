@@ -54,7 +54,7 @@ class BaseDatos {
   bool Insertar(const CerraduraInteligente& nueva_cerradura);
   bool Insertar(const acceso& nuevo_acceso);
 
-  bool EliminarUsuario(const unsigned id);
+  bool EliminarUsuario(const std::string& nombre_usuario);
   bool EliminarCerradura(const unsigned id);
 
   unsigned NuevoId() { return ++contador_id_; }
@@ -63,20 +63,27 @@ class BaseDatos {
   int NumeroDeCerraduras() const { return cerraduras_.size(); }
 
   std::vector<acceso> ObtenerRegistro(const unsigned id) const;
+  std::vector<acceso> ObtenerRegistro(const std::string& nombre) const;
 
   // Modificar usuarios (si id ya está sustituir)
 
   // Getters
   std::vector<Usuario> GetUsuarios() const { return usuarios_; }
   std::vector<CerraduraInteligente> GetCerraduras() const { return cerraduras_; }
+  std::vector<acceso> GetAccesos() const { return accesos_; }
   // Serializar
   void Serialize(std::ostream& os) const;
   // Deserializar
   void Deserialize(std::istream& is);
 
-  // Buscar
+  // Buscar Usuarios
   bool ExisteUsuario(const std::string& nombre_usuario) const;
-  Usuario BuscarUsuario(const std::string& nombre_usuario) const;
+  const Usuario& BuscarUsuario(const std::string& nombre_usuario) const;
+  Usuario& BuscarUsuario(const std::string& nombre_usuario);
+
+  // Buscar Cerraduras
+  bool ExisteCerradura(const unsigned id) const;
+  CerraduraInteligente& BuscarCerradura(const unsigned id);
 
  private:
   // Personas
