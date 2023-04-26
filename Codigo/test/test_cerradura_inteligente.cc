@@ -7,8 +7,6 @@
 
 #include "../src/cerradura_inteligente.h"
 
-std::stringstream stream_for_tests{};
-
 /****************\
 |* TESTS PARA X *|
 \****************/
@@ -19,7 +17,6 @@ TEST(TestCerraduraInteligente, CreacionCerradura) {
 
   CerraduraInteligente cerradura_test2{34783};
   EXPECT_EQ(cerradura_test2.Id(), 34783);
-
   
 }
 

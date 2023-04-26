@@ -24,7 +24,7 @@ TEST(TestBaseDatos, InsercionesDeUsuarioYCerradura) {
   EXPECT_EQ(base_de_datos.GetCerraduras().size(), 1);
   EXPECT_EQ(base_de_datos.GetUsuarios()[0].GetNombreUsuario(), "platinita");
   EXPECT_EQ(base_de_datos.GetUsuarios()[0].ConfirmarContrasenya("1234567"), true);
-  EXPECT_EQ(base_de_datos.GetCerraduras()[0].Id(), 1002);
+  EXPECT_EQ(base_de_datos.GetCerraduras()[0].Id(), 1001);
   EXPECT_EQ(base_de_datos.GetCerraduras()[0].Nombre(), "cerradurita");
 }
 
@@ -35,8 +35,8 @@ TEST(TestBaseDatos, InsercionesDeAccesos) {
   acceso acceso1(nuevo_usuario, nueva_cerradura, "abrir");
   base_de_datos.Insertar(acceso1);
   EXPECT_EQ(base_de_datos.GetAccesos().size(), 1);
-  EXPECT_EQ(base_de_datos.GetAccesos()[0].usuario_, "platinita");
-  EXPECT_EQ(base_de_datos.GetAccesos()[0].cerradura_, 1001);
+  EXPECT_EQ(base_de_datos.GetAccesos()[0].usuario_.GetNombreUsuario(), "platinita");
+  EXPECT_EQ(base_de_datos.GetAccesos()[0].cerradura_.Id(), 1001);
   EXPECT_EQ(base_de_datos.GetAccesos()[0].accion_, "abrir");
 }
 
@@ -49,7 +49,7 @@ TEST(TestBaseDatos, Eliminaciones) {
   EXPECT_EQ(base_de_datos.GetUsuarios().size(), 1);
   EXPECT_EQ(base_de_datos.GetCerraduras().size(), 1);
   base_de_datos.EliminarUsuario("platinita");
-  base_de_datos.EliminarCerradura(1002);
+  base_de_datos.EliminarCerradura(1001);
   EXPECT_EQ(base_de_datos.GetUsuarios().size(), 0);
   EXPECT_EQ(base_de_datos.GetCerraduras().size(), 0);
 }
@@ -65,13 +65,18 @@ TEST(TestBaseDatos, NuevosIds) {
 
 TEST(TestBaseDatos, NumeroDeUsuariosYCerraduras) {
   BaseDatos base_de_datos;
-  Usuario nuevo_usuario("a", "1234567");
-  Usuario nuevo_usuario("b", "1234567");
-  Usuario nuevo_usuario("c", "1234567");
+  Usuario nuevo_usuario1("a", "1234567");
+  Usuario nuevo_usuario2("b", "1234567");
+  Usuario nuevo_usuario3("c", "1234567");
+  base_de_datos.Insertar(nuevo_usuario1);
+  base_de_datos.Insertar(nuevo_usuario2);
+  base_de_datos.Insertar(nuevo_usuario3);
   EXPECT_EQ(base_de_datos.NumeroDeUsuarios(), 3);
-  Usuario nuevo_usuario("d", "1234567");
-  Usuario nuevo_usuario("e", "1234567");
-  EXPECT_EQ(base_de_datos.NumeroDeCerraduras(), 5);
+  CerraduraInteligente nueva_cerradura1(base_de_datos.NuevoId(), "cerradurita");
+  CerraduraInteligente nueva_cerradura2(base_de_datos.NuevoId(), "fischillo");
+  base_de_datos.Insertar(nueva_cerradura1);
+  base_de_datos.Insertar(nueva_cerradura2);
+  EXPECT_EQ(base_de_datos.NumeroDeCerraduras(), 2);
 }
 
 TEST(TestBaseDatos, ObtenerRegistros) {
@@ -87,22 +92,13 @@ TEST(TestBaseDatos, ObtenerRegistros) {
   std::vector<acceso> busqueda1 = base_de_datos.ObtenerRegistro("platinita");
   std::vector<acceso> busqueda2 = base_de_datos.ObtenerRegistro(1002);
   EXPECT_EQ(busqueda1.size(), 1);
-  EXPECT_EQ(busqueda1[0].usuario_, "platinita");
-  EXPECT_EQ(busqueda1[0].cerradura_, "cerradurita");
+  EXPECT_EQ(busqueda1[0].usuario_.GetNombreUsuario(), "platinita");
+  EXPECT_EQ(busqueda1[0].cerradura_.Nombre(), "cerradurita");
   EXPECT_EQ(busqueda1[0].accion_, "abrir");
   EXPECT_EQ(busqueda2.size(), 1);
-  EXPECT_EQ(busqueda2[0].usuario_, "Valerio");
-  EXPECT_EQ(busqueda2[0].cerradura_, "fischillo");
+  EXPECT_EQ(busqueda2[0].usuario_.GetNombreUsuario(), "Valerio");
+  EXPECT_EQ(busqueda2[0].cerradura_.Nombre(), "fischillo");
   EXPECT_EQ(busqueda2[0].accion_, "cerrar");
-}
-
-TEST(TestBaseDatos, Getters) {
-  BaseDatos base_de_datos;
-  Usuario nuevo_usuario("platinita", "1234567");
-  base_de_datos.Insertar(nuevo_usuario);
-  CerraduraInteligente nueva_cerradura(base_de_datos.NuevoId(), "cerradurita");
-  base_de_datos.Insertar(nueva_cerradura);
-  // TO BE CONTINUED
 }
 
 TEST(TestBaseDatos, Buscar) {

@@ -4,10 +4,8 @@
 #include <sstream>
 #include <string>
 
-#include "../src/usuario.cc"
 #include "../src/base_datos.h"
-
-std::stringstream stream_for_tests{};
+#include "../src/usuario.h"
 
 // Comprueba que los usuarios creados por defecto no contengan información residual
 
@@ -37,5 +35,5 @@ TEST(TestUsuario, PermisosDeAcceso) {
   CerraduraInteligente nueva_cerradura(base_de_datos.NuevoId(), "cerradurita");
   nuevo_usuario.PermitirAccesoCerradura(nueva_cerradura.Id());
   EXPECT_EQ(nuevo_usuario.GetCerradurasPermitidas().size(), 1);
-  EXPECT_EQ(nuevo_usuario.GetCerradurasPermitidasAt(1), nueva_cerradura);
+  EXPECT_EQ(nuevo_usuario.GetCerradurasPermitidasAt(0), nueva_cerradura.Id());
 }

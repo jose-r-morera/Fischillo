@@ -41,8 +41,8 @@ std::string Identificacion(BaseDatos& base_de_datos) {
   std::string nombre_usuario{""};
   while (nombre_usuario == "") {
     std::cout << "Debe identificarse\n\n"
-                 "a) Registrarse\n"
-                 "b) Iniciar sesión\n";
+    "a) Registrarse\n"
+    "b) Iniciar sesión\n";
     std::cin >> opcion;
     system("clear");
 
@@ -52,7 +52,7 @@ std::string Identificacion(BaseDatos& base_de_datos) {
         /// Creamos un nuevo usuario
         nombre_usuario = Registrarse(base_de_datos);
       } break;
-
+      // En caso de que el usuario decida iniciar sesión, 
       case 'b': {
         std::cout << "- Iniciar sesión -\n";
         // Intentamos iniciar sesión
@@ -61,7 +61,6 @@ std::string Identificacion(BaseDatos& base_de_datos) {
     }
     system("clear");
   }
-
   return nombre_usuario;
 }
 
@@ -100,6 +99,7 @@ std::string IntroducirContrasenya() {
  * @return el identificador del usuario creado o una cadena vacía en caso de que se haya abortado el registro.
  */
 std::string Registrarse(BaseDatos& base_de_datos) {
+  std::cout << "Ha seleccionado la opción: registrarse\n\n";
   // Solicitamos un nombre de usuario hasta que sea válido o se solicite salir
   const std::string kPalabraSalir{"salir"};
   bool nombre_valido{false};
@@ -110,7 +110,7 @@ std::string Registrarse(BaseDatos& base_de_datos) {
     std::cin >> nuevo_nombre_usuario;
 
     if (nuevo_nombre_usuario == kPalabraSalir) {
-      std::cout << "Saliendo" << std::endl;
+      std::cout << LGREEN << "\nSaliendo..." << RESET << std::endl;
       sleep(1);
       return "";
 
@@ -149,7 +149,7 @@ std::string IniciarSesion(const BaseDatos& kBaseDeDatos) {
     std::cout << "Introduzca su nombre de usuario o " << kPalabraSalir << ": ";
     std::cin >> nombre_usuario;
     if (nombre_usuario == kPalabraSalir) {
-      std::cout << "Saliendo" << std::endl;
+      std::cout << LGREEN << "\nSaliendo..." << RESET << std::endl;
       sleep(1);
       return "";
     }
@@ -177,6 +177,14 @@ std::string IniciarSesion(const BaseDatos& kBaseDeDatos) {
   }
 }
 
+void MostrarMenu(BaseDatos& base_datos, const Usuario& kUsuario) {
+  // El panel de menú permite al usuario elegir una de las siguientes opciones:
+  //  - Interactuar con las cerraduras a las que tiene acceso
+  //  - Gestionar cerraduras (añadir, eliminar, modificar)
+  //  - Conceder acceso a un usuario
+  system("clear");
+}
+
 /**
  * @brief Permite al usuario interactuar con las cerraduras a las que tiene acceso. Se muestra su nombre y su estado.
  *
@@ -186,12 +194,12 @@ std::string IniciarSesion(const BaseDatos& kBaseDeDatos) {
  */
 void InteractuarCerraduras(BaseDatos& base_datos, const std::string& kNombreUsuario) {
   std::cout << GREEN << "Cerraduras del usuario\n " << RESET;
-  Usuario usuario_actual = base_datos.BuscarUsuario(kNombreUsuario);
+  const Usuario& kUsuarioActual = base_datos.BuscarUsuario(kNombreUsuario);
 
   /// Para cada cerradura mostramos un número, su nombre y su estado
   unsigned numero_cerradura{1};
-  for(const unsigned kIdCerradura : usuario_actual.GetCerradurasPermitidas()) {
-    const CerraduraInteligente kCerradura = base_datos.BuscarCerradura(kIdCerradura);
+  for(const unsigned kIdCerradura : kUsuarioActual.GetCerradurasPermitidas()) {
+    const CerraduraInteligente& kCerradura = base_datos.BuscarCerradura(kIdCerradura);
     std::cout << numero_cerradura << ") " << kCerradura.Nombre() << " -> ";
     if (kCerradura.Abierto()) {
       std::cout << GREEN << "ABIERTA\n" << RESET;
@@ -205,11 +213,11 @@ void InteractuarCerraduras(BaseDatos& base_datos, const std::string& kNombreUsua
   unsigned numero_leido_cerradura{};
   std::cin >> numero_leido_cerradura;
   
-  if(numero_cerradura > usuario_actual.GetCerradurasPermitidas().size()) {
+  if(numero_cerradura > kUsuarioActual.GetCerradurasPermitidas().size()) {
     std::cout << RED << "Número incorrecto\n" << RESET;
   } else {
-    unsigned id_cerradura_seleccionada = usuario_actual.GetCerradurasPermitidasAt(numero_leido_cerradura);
-    CerraduraInteligente cerradura_seleccionada = base_datos.BuscarCerradura(id_cerradura_seleccionada);
+    unsigned id_cerradura_seleccionada = kUsuarioActual.GetCerradurasPermitidasAt(numero_leido_cerradura);
+    CerraduraInteligente& cerradura_seleccionada = base_datos.BuscarCerradura(id_cerradura_seleccionada);
     cerradura_seleccionada.Interaccion();
     std::cout << LGREEN << "Cerradura '" << cerradura_seleccionada.Nombre() << "' ";
     if (cerradura_seleccionada.Abierto()) {
@@ -243,7 +251,7 @@ bool ConcederAcceso(BaseDatos& base_de_datos, const Usuario kUsuario) {
       Usuario usuario_encontrado = base_de_datos.BuscarUsuario(usuario);
       usuario_encontrado.PermitirAccesoCerradura(id_cerradura);
 
-      std::cout << "El usuario " << usuario << " tiene acceso a " << std::endl;
+      std::cout << "El usuario " << usuario << " tiene acceso a: " << std::endl;
       for (unsigned i = 0; i < usuario_encontrado.GetCerradurasPermitidas().size(); i++) {
         std::cout << base_de_datos.BuscarCerradura(usuario_encontrado.GetCerradurasPermitidasAt(i)).Nombre() << " (" << usuario_encontrado.GetCerradurasPermitidasAt(i) << ")" << std::endl;
       }
@@ -258,10 +266,17 @@ bool ConcederAcceso(BaseDatos& base_de_datos, const Usuario kUsuario) {
   return false;
 }
 
-void GestionarCerraduras(const BaseDatos& kBaseDeDatos) {
+/**
+ * @brief Añadir, eliminar y modificar
+ * 
+ * @param base_datos 
+ */
+void GestionarCerraduras(BaseDatos& base_datos) {
   std::cout << "Creación de una cerradura.\n"
             << "Escriba \"confirmar\" para continuar.\n"
             << "Escriba \"salir\" para volver al menú de inicio de sesión.\n";
-  std::string nuevo_nombre_usuario{""};
-  std::cin >> nuevo_nombre_usuario;
+  std::string nombre_cerradura{""};
+  std::cin >> nombre_cerradura;
+  base_datos.Insertar(CerraduraInteligente{base_datos.NuevoId(), nombre_cerradura});
+  std::cout << "¡Cerradura creada con éxito!\n";
 }

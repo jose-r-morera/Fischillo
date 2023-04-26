@@ -30,7 +30,7 @@
 int main() {
   system("clear");
   std::cout << GREEN << "Bienvenido a Smartlock\n\n" << RESET;
-
+  
   // Leemos la base de datos del fichero que la contiene
   const std::string kFicheroBaseDatos{"base.datos"};
   std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
@@ -42,8 +42,7 @@ int main() {
   const std::string kIdUsuario = Identificacion(base_datos_leida);
 
   // Mostramos el menú
-  // ToDo
-  InteractuarCerraduras(base_datos_leida, kIdUsuario);
+  MostrarMenu(base_datos_leida, kIdUsuario);
 
   // Guardamos los cambios
   std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);
@@ -52,5 +51,5 @@ int main() {
   // Cerrramos el fichero
   ofs.close();
 
-  return 0;
+  return 0; 
 }

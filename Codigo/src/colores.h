@@ -41,6 +41,7 @@
 #define LBLUE   "\x1B[38;2;53;149;240m"
 #define LGREEN  "\x1B[38;2;17;245;120m"
 #define GRAY    "\x1B[38;2;176;174;174m"
+#define PURPLE  "\x1B[38;2;128;0;128m"
 #define RESET   "\x1b[0m"
 #define BOLD    "\x1b[1m"
 #define UNDERLINE "\x1b[4m"

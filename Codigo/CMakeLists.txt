@@ -51,7 +51,11 @@ add_executable(runTests
     test/gtest_main.cc
     test/test_cerradura_inteligente.cc
     test/test_base_datos.cc
-    test/test_usuarios.cc)
+    test/test_usuarios.cc
+    src/cliente_funciones.cc
+    src/base_datos.cc
+    src/cerradura_inteligente.cc
+    src/usuario.cc)
 
 # Adds an executable target called "fischillo" to be built from the source files listed in the command invocation.
 # Add a new line for each new .cc file
