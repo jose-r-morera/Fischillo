@@ -203,7 +203,7 @@ void MostrarMenu(BaseDatos& base_datos, const Usuario& kUsuario) {
                 << "2. Salir\n\n";
     }
 
-    // preguntamos al usuario lo que desea hacer y comprobamos que la opción es válida
+    // Preguntamos al usuario lo que desea hacer y comprobamos que la opción es válida
     std::cout << GREEN << "Opción: " << RESET;
     unsigned opcion{0};
     std::cin >> opcion;
@@ -321,13 +321,15 @@ void ConcederAcceso(BaseDatos& base_datos, const Usuario& kUsuario) {
         std::cout << "· " << LBLUE << kCerradura.Nombre() << RESET << CYAN << " ("
                   << kCerradura.Id() << ")" << RESET << std::endl;
       }
-      std::cout << "\nIntroducir el ID de la cerradura a la que se quiere acceder:" << std::endl;
-      unsigned id_cerradura;
+      std::cout << "\nIntroduzca el ID de la cerradura a la que se quiere acceder (o \"salir\"):" << std::endl;
+      std::string id_cerradura;
       std::cin >> id_cerradura;
-      while (!(base_datos.ExisteCerradura(id_cerradura))) {
+      if (id_cerradura == "salir") { return; } // Salir de la funcion 
+      while (!(base_datos.ExisteCerradura(stoi(id_cerradura)))) {
         std::cout << RED << "La ID introducida no existe. Ingrésela de nuevo: " << RESET
                   << std::endl;
         std::cin >> id_cerradura;
+        if (id_cerradura == "salir") { return; } // Salir de la funcion 
       }
       std::cout << "Introducir el nombre del usuario al que se le quiere conceder acceso:"
                 << std::endl;
@@ -340,7 +342,7 @@ void ConcederAcceso(BaseDatos& base_datos, const Usuario& kUsuario) {
         std::cin >> usuario;
       }
       Usuario& usuario_encontrado = base_datos.BuscarUsuario(usuario);
-      usuario_encontrado.PermitirAccesoCerradura(id_cerradura);
+      usuario_encontrado.PermitirAccesoCerradura(stoi(id_cerradura));
 
       std::cout << "El usuario " << MAGENTA << usuario << RESET << " tiene acceso a: " << std::endl;
       for (unsigned i = 0; i < usuario_encontrado.GetCerradurasPermitidas().size(); i++) {
@@ -364,20 +366,47 @@ void ConcederAcceso(BaseDatos& base_datos, const Usuario& kUsuario) {
 }
 
 /**
- * @brief Añadir, eliminar y modificar
+ * @brief Añadir y eliminar cerraduras
  *
  * @param base_datos
  */
 void GestionarCerraduras(BaseDatos& base_datos) {
-  std::cout << "Creación de una cerradura.\n"
-            << "Escriba \"confirmar\" para continuar.\n"
-            << "Escriba \"salir\" para volver al menú de inicio de sesión.\n";
-  sleep(1);
-  std::string nombre_cerradura{};
-  std::getline(std::cin, nombre_cerradura); // borrar los newline del cin
-  std::getline(std::cin, nombre_cerradura);
-  std::cout << "LEIDO " << nombre_cerradura << std::endl;
-  sleep(1);
-  base_datos.Insertar(CerraduraInteligente{base_datos.NuevoId(), nombre_cerradura});
-  std::cout << "¡Cerradura creada con éxito!\n";
+  // Borrar un salto de linea anterior a esta funcion para que no sea leido como opcion
+  std::string limpiar{};
+  std::getline(std::cin, limpiar);
+  // Gestion
+  while (true) {
+    std::cout << "Escriba \"crear\" o \"borrar\" para continuar.\n"
+              << "Escriba cualquier otra cosa para volver al menu.\n";
+    sleep(1);
+    std::string opcion{};
+    std::getline(std::cin, opcion);
+    if (opcion == "crear") {
+      std::cout << "Nombre para la cerradura:\n";
+      std::string nombre_cerradura{};
+      std::getline(std::cin, nombre_cerradura);
+      // Insertar
+      base_datos.Insertar(CerraduraInteligente{base_datos.NuevoId(), nombre_cerradura});
+      std::cout << GREEN <<"¡Cerradura creada con éxito!\n\n" << RESET;
+    }  else if (opcion == "borrar") {
+      // Mostrar cerraduras
+      std::cout << "A continuación se muestran las cerraduras del sistema: " << std::endl;
+      const std::vector<CerraduraInteligente> kCerraduras = base_datos.GetCerraduras();
+      for (const auto& kCerradura : kCerraduras) {
+        std::cout << "· " << LBLUE << kCerradura.Nombre() << RESET << CYAN << " ("
+                  << kCerradura.Id() << ")" << RESET << std::endl;
+      }
+      // Eliminar
+      std::cout << "Id de la cerradura que desea borrar:\n";
+      std::string id_cerradura{};
+      std::getline(std::cin, id_cerradura);
+      if (base_datos.EliminarCerradura(stoi(id_cerradura))) {
+        std::cout << GREEN << "¡Cerradura eliminada con éxito!\n\n" << RESET;
+      }  else {
+        std::cout << "No existe ninguna cerradura con la id introducida\n\n";
+      }
+    }  else {
+      break;
+    }
+  }
 }

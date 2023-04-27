@@ -38,10 +38,11 @@ int main() {
   base_datos_leida.Deserialize(ifs);
   ifs.close();
 
-  /// El usuario se debe identificar
+  // El usuario se debe identificar
   //const std::string kNombreUsuario = Identificacion(base_datos_leida);
   const std::string kNombreUsuario = "admin";
   const Usuario& kUsuarioActual = base_datos_leida.BuscarUsuario(kNombreUsuario);
+  
   // Mostramos el menú
   MostrarMenu(base_datos_leida, kUsuarioActual);
 

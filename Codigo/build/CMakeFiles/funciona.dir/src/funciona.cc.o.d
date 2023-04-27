@@ -1,5 +1,5 @@
 CMakeFiles/funciona.dir/src/funciona.cc.o: \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/funciona.cc \
+ /home/dricen/cerradura_fis/Codigo/src/funciona.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
@@ -150,12 +150,12 @@ CMakeFiles/funciona.dir/src/funciona.cc.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/iostream \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.h \
+ /home/dricen/cerradura_fis/Codigo/src/base_datos.h \
  /usr/include/c++/11/ctime /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/excepcion.h \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h
+ /home/dricen/cerradura_fis/Codigo/src/cerradura_inteligente.h \
+ /home/dricen/cerradura_fis/Codigo/src/excepcion.h \
+ /home/dricen/cerradura_fis/Codigo/src/usuario.h

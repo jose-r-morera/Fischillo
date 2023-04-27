@@ -1,5 +1,5 @@
 CMakeFiles/runTests.dir/test/gtest_main.cc.o: \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/test/gtest_main.cc \
+ /home/dricen/cerradura_fis/Codigo/test/gtest_main.cc \
  /usr/include/stdc-predef.h /usr/local/include/gtest/gtest.h \
  /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

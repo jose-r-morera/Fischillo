@@ -46,6 +46,10 @@ int main() {
   base_datos_leida.Deserialize(ifs);  // Comentar para crear de cero
   ifs.close();
 
+  // Crear nuevo admin
+  // Usuario nuevo_admin{"admin", "", true};
+  // base_datos_leida.Insertar(nuevo_admin);
+
   std::cout << "¿Qué quieres hacer?\n"
                "a) Ver usuarios\n"
                "b) Añadir usuario\n"

@@ -1,7 +1,7 @@
 CMakeFiles/fischillo.dir/src/usuario.cc.o: \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.cc \
+ /home/dricen/cerradura_fis/Codigo/src/usuario.cc \
  /usr/include/stdc-predef.h \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h \
+ /home/dricen/cerradura_fis/Codigo/src/usuario.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -155,4 +155,4 @@ CMakeFiles/fischillo.dir/src/usuario.cc.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h
+ /home/dricen/cerradura_fis/Codigo/src/cerradura_inteligente.h

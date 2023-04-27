@@ -1,5 +1,5 @@
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/rebuild_cache.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/edit_cache.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/funciona.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/runTests.dir
+/home/dricen/cerradura_fis/Codigo/build/CMakeFiles/runTests.dir
+/home/dricen/cerradura_fis/Codigo/build/CMakeFiles/fischillo.dir
+/home/dricen/cerradura_fis/Codigo/build/CMakeFiles/funciona.dir
+/home/dricen/cerradura_fis/Codigo/build/CMakeFiles/edit_cache.dir
+/home/dricen/cerradura_fis/Codigo/build/CMakeFiles/rebuild_cache.dir
