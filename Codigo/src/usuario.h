@@ -57,6 +57,18 @@ class Usuario {
   //  **Otras funciones**:
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
   void PermitirAccesoCerradura(unsigned id_cerradura);
+
+
+  // ESTO VA EN EL CC
+  void RetirarAccesoCerradura(unsigned id_cerradura) {
+    for (int i{0}; i < (int)cerraduras_permitidas_.size(); ++i) {
+      if (cerraduras_permitidas_[i] == id_cerradura) {
+        cerraduras_permitidas_.erase(cerraduras_permitidas_.begin() + i);
+      }
+    }
+  }
+
+
   // Comprueba si el usuario tiene permisos de administrador
   bool EsAdministrador() const { return administrador_; }
   // Comprueba si la contraseña introducida es correcta

@@ -101,6 +101,9 @@ bool BaseDatos::EliminarCerradura(const unsigned id) {
   for (int i{0}; i < NumeroDeCerraduras(); ++i) {
     if (cerraduras_[i].Id() == id) {
       cerraduras_.erase(cerraduras_.begin() + i);
+      for (auto& usuario : usuarios_) {
+        usuario.RetirarAccesoCerradura(id);
+      }
       return true;
     }
   }
