@@ -255,7 +255,7 @@ void MostrarMenu(BaseDatos& base_datos, const Usuario& kUsuario) {
             << "Estamos trabajando en posibles mejoras.\nSi tiene alguna sugerencia, no dude en "
                "contactar con nuestro equipo.\n"
             << RESET;
-  sleep(3.5);
+  sleep(3);
   system("clear");
 }
 
@@ -308,6 +308,9 @@ void InteractuarCerraduras(BaseDatos& base_datos, const Usuario& kUsuario) {
 
 /**
  * @brief Un usuario administrador puede asignar acceso a una determinada cerradura
+ * 
+ * @param base_datos 
+ * @param kUsuario 
  */
 void ConcederAcceso(BaseDatos& base_datos, const Usuario& kUsuario) {
   std::string respuesta = "si";
@@ -403,7 +406,7 @@ void GestionarCerraduras(BaseDatos& base_datos) {
       if (base_datos.EliminarCerradura(stoi(id_cerradura))) {
         std::cout << GREEN << "¡Cerradura eliminada con éxito!\n\n" << RESET;
       }  else {
-        std::cout << "No existe ninguna cerradura con la id introducida\n\n";
+        std::cerr << "No existe ninguna cerradura con la id introducida\n\n";
       }
     }  else {
       break;

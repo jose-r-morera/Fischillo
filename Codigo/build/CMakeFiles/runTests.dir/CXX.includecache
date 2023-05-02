@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
+base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
 ctime
 -
@@ -19,6 +23,10 @@ excepcion.h
 /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
 usuario.h
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+
+/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc
+cerradura_inteligente.h
+/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
 fstream
@@ -54,6 +62,10 @@ exception
 iostream
 -
 
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.cc
+usuario.h
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 fstream
 -
@@ -63,4 +75,50 @@ vector
 -
 cerradura_inteligente.h
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+
+/home/jr/Desktop/SmartLock/Codigo/test/gtest_main.cc
+gtest/gtest.h
+-
+iostream
+-
+
+/home/jr/Desktop/SmartLock/Codigo/test/test_base_datos.cc
+gtest/gtest.h
+-
+cmath
+-
+sstream
+-
+string
+-
+../src/base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+
+/home/jr/Desktop/SmartLock/Codigo/test/test_cerradura_inteligente.cc
+gtest/gtest.h
+-
+cmath
+-
+sstream
+-
+string
+-
+../src/cerradura_inteligente.h
+/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+
+/home/jr/Desktop/SmartLock/Codigo/test/test_usuarios.cc
+gtest/gtest.h
+-
+iostream
+-
+cmath
+-
+sstream
+-
+string
+-
+../src/base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+../src/usuario.h
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 

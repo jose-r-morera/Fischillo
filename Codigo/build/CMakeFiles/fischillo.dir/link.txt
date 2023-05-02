@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/fischillo.dir/src/cliente.cc.o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o CMakeFiles/fischillo.dir/src/base_datos.cc.o CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o CMakeFiles/fischillo.dir/src/usuario.cc.o -o fischillo 
+/usr/bin/c++    -rdynamic CMakeFiles/fischillo.dir/src/cliente.cc.o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o CMakeFiles/fischillo.dir/src/base_datos.cc.o CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o CMakeFiles/fischillo.dir/src/usuario.cc.o  -o fischillo 

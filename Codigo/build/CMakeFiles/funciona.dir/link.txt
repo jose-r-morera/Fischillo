@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/funciona.dir/src/cerradura_inteligente.cc.o CMakeFiles/funciona.dir/src/usuario.cc.o CMakeFiles/funciona.dir/src/base_datos.cc.o CMakeFiles/funciona.dir/src/funciona.cc.o -o funciona 
+/usr/bin/c++    -rdynamic CMakeFiles/funciona.dir/src/cerradura_inteligente.cc.o CMakeFiles/funciona.dir/src/usuario.cc.o CMakeFiles/funciona.dir/src/base_datos.cc.o CMakeFiles/funciona.dir/src/funciona.cc.o  -o funciona 

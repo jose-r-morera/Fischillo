@@ -24,6 +24,10 @@ excepcion.h
 usuario.h
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 
+/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc
+cerradura_inteligente.h
+/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
 fstream
 -
