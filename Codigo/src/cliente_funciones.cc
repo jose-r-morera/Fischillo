@@ -344,16 +344,22 @@ void ConcederAcceso(BaseDatos& base_datos, const Usuario& kUsuario) {
                   << std::endl;
         std::cin >> usuario;
       }
-      Usuario& usuario_encontrado = base_datos.BuscarUsuario(usuario);
-      usuario_encontrado.PermitirAccesoCerradura(stoi(id_cerradura));
+      try {
+        Usuario& usuario_encontrado = base_datos.BuscarUsuario(usuario) ;
 
-      std::cout << "El usuario " << MAGENTA << usuario << RESET << " tiene acceso a: " << std::endl;
-      for (unsigned i = 0; i < usuario_encontrado.GetCerradurasPermitidas().size(); i++) {
-        std::cout
-            << CYAN
-            << base_datos.BuscarCerradura(usuario_encontrado.GetCerradurasPermitidasAt(i)).Nombre()
-            << RESET << BLUE << " (" << usuario_encontrado.GetCerradurasPermitidasAt(i) << ")"
-            << RESET << std::endl;
+        usuario_encontrado.PermitirAccesoCerradura(stoi(id_cerradura));
+        std::cout << "El usuario " << MAGENTA << usuario << RESET << " tiene acceso a: " << std::endl;
+        for (unsigned i = 0; i < usuario_encontrado.GetCerradurasPermitidas().size(); i++) {
+          std::cout
+              << CYAN
+              << base_datos.BuscarCerradura(usuario_encontrado.GetCerradurasPermitidasAt(i)).Nombre()
+              << RESET << BLUE << " (" << usuario_encontrado.GetCerradurasPermitidasAt(i) << ")"
+              << RESET << std::endl;
+        }
+
+      } catch (BaseDatosExcepcion& excepcion) {
+        std::cerr << RED << excepcion.what() << RESET << std::endl;
+        return;
       }
 
       std::cout << "¿Quiere permitir algún otro acceso? [Si/No]" << std::endl;
