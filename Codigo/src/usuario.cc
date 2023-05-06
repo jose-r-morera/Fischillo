@@ -77,3 +77,12 @@ void Usuario::Deserialize(std::istream& is) {
   // Deserialize administrador_
   is.read(reinterpret_cast<char*>(&administrador_), sizeof(administrador_));
 }
+
+// Permite retirar el acceso de un usuario a una cerradura concreta
+void Usuario::RetirarAccesoCerradura(unsigned id_cerradura) {
+  for (unsigned i{0}; i < GetCerradurasPermitidas().size(); ++i) {
+    if (cerraduras_permitidas_[i] == id_cerradura) {
+      cerraduras_permitidas_.erase(cerraduras_permitidas_.begin() + i);
+    }
+  }
+}

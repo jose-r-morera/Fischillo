@@ -1,7 +1,7 @@
 CMakeFiles/runTests.dir/src/base_datos.cc.o: \
- /home/dricen/cerradura_fis/Codigo/src/base_datos.cc \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.cc \
  /usr/include/stdc-predef.h \
- /home/dricen/cerradura_fis/Codigo/src/base_datos.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.h \
  /usr/include/c++/11/ctime \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -154,10 +154,10 @@ CMakeFiles/runTests.dir/src/base_datos.cc.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/dricen/cerradura_fis/Codigo/src/cerradura_inteligente.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/dricen/cerradura_fis/Codigo/src/excepcion.h \
- /home/dricen/cerradura_fis/Codigo/src/usuario.h
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/excepcion.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h

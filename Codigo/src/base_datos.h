@@ -36,12 +36,12 @@
 
 struct acceso {
   acceso() {}
-  acceso(const Usuario& usuario, const CerraduraInteligente& cerradura, const std::string& accion)
-      : usuario_{usuario}, cerradura_{cerradura}, accion_{accion} {
+  acceso(const std::string& nombre_usuario, const unsigned id_cerradura, const std::string& accion)
+      : usuario_{nombre_usuario}, cerradura_{id_cerradura}, accion_{accion} {
     time(&time_);
   }
-  Usuario usuario_{};
-  CerraduraInteligente cerradura_{};
+  std::string usuario_{};
+  unsigned cerradura_{};
   std::string accion_{};
   time_t time_{};
 };

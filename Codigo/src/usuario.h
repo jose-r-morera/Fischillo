@@ -50,6 +50,7 @@ class Usuario {
 
   //  **Setters**:
   // Almacenamos la contraseña en contrasenya_
+  void SetNombreUsuario(std::string nuevo_nombre) { nombre_usuario_ = nuevo_nombre; } 
   void SetContrasenya(std::string contrasenya) {
     contrasenya_ = std::hash<std::string>{}(contrasenya);
   }
@@ -58,23 +59,17 @@ class Usuario {
   // Asigna las cerraduras a las que tiene permitido el acceso el usuario
   void PermitirAccesoCerradura(unsigned id_cerradura);
 
-
-  // ESTO VA EN EL CC
-  void RetirarAccesoCerradura(unsigned id_cerradura) {
-    for (int i{0}; i < (int)cerraduras_permitidas_.size(); ++i) {
-      if (cerraduras_permitidas_[i] == id_cerradura) {
-        cerraduras_permitidas_.erase(cerraduras_permitidas_.begin() + i);
-      }
-    }
-  }
-
+  // Permite retirar el acceso de un usuario a una cerradura concreta
+  void RetirarAccesoCerradura(unsigned id_cerradura);
 
   // Comprueba si el usuario tiene permisos de administrador
   bool EsAdministrador() const { return administrador_; }
+
   // Comprueba si la contraseña introducida es correcta
   bool ConfirmarContrasenya(std::string contrasenya_introducida) const {
     return (std::hash<std::string>{}(contrasenya_introducida) == contrasenya_);
   }
+
   // Almacena cada uno de los datos introducidos, modificando su formato de entrada
   void Serialize(std::ostream& os) const;
   // Devuelve el formato original a los datos del usuario

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/debug.dir/src/cerradura_inteligente.cc.o CMakeFiles/debug.dir/src/usuario.cc.o CMakeFiles/debug.dir/src/base_datos.cc.o CMakeFiles/debug.dir/src/debug.cc.o -o debug 

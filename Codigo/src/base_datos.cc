@@ -39,7 +39,7 @@ bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
       return false;
     }
   }
-  usuarios_.push_back(nuevo_usuario);
+  usuarios_.emplace_back(nuevo_usuario);
   return true;
 }
 
@@ -57,7 +57,7 @@ bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
       return false;
     }
   }
-  cerraduras_.push_back(nueva_cerradura);
+  cerraduras_.emplace_back(nueva_cerradura);
   return true;
 }
 
@@ -69,7 +69,7 @@ bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
  * @return false No se ha completado la insertación (no pasa nunca)
  */
 bool BaseDatos::Insertar(const acceso& nuevo_acceso) {
-  accesos_.push_back(nuevo_acceso);
+  accesos_.emplace_back(nuevo_acceso);
   return true;
 }
 
@@ -117,33 +117,33 @@ bool BaseDatos::EliminarCerradura(const unsigned id) {
  * @return std::vector<acceso> Vector de los accesos que contengan el id
  */
 std::vector<acceso> BaseDatos::ObtenerRegistro(const unsigned id) const {
-  std::vector<acceso> registro;
+  std::vector<acceso> registro{};
   for (const auto& acceso : accesos_)  {
-    if (acceso.cerradura_.Id() == id) {
-      registro.push_back(acceso);
+    if (acceso.cerradura_ == id) {
+      registro.emplace_back(acceso);
     }
   }
   return registro;
 }
 
 /**
- * @brief Obtiene todos los accesos que contengan el nombre dado
+ * @brief Obtiene todos los accesos que contengan el nombre de usuario dado
  * 
  * @param nombre Nombre a buscar
  * @return std::vector<acceso> Vector de accesos con coincidencias de nombre
  */
 std::vector<acceso> BaseDatos::ObtenerRegistro(const std::string& nombre) const {
-  std::vector<acceso> registro;
+  std::vector<acceso> registro{};
   for (const auto& acceso : accesos_)  {
-    if (acceso.usuario_.GetNombreUsuario() == nombre || acceso.cerradura_.Nombre() == nombre) {
-      registro.push_back(acceso);
+    if (acceso.usuario_ == nombre) {
+      registro.emplace_back(acceso);
     }
   }
   return registro;
 }
 
 /**
- * @brief Serializa la base de datos
+ * @brief Serializa la base de datos para poder almacenarla
  * 
  * @param os Referencia a un flujo de salida
  */

@@ -12,7 +12,7 @@
  *           José Ramón Morera Campos, alu0101471846@ull.edu.es
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
  * @date    12/04/2023
- * @file    aplicacion.cc
+ * @file    debug.cc
  * @brief   Programa cliente. Aplicación para la gestión de cerraduras inteligentes.
  *
  * @see

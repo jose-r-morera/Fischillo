@@ -36,10 +36,20 @@ std::string Identificacion(BaseDatos& base_de_datos);
 std::string Registrarse(BaseDatos& base_de_datos);
 std::string IniciarSesion(const BaseDatos& kBaseDeDatos);
 
-/// Opciones del menú de la app
-void MostrarMenu(BaseDatos& base_datos, const Usuario& kUsuario);
-void InteractuarCerraduras(BaseDatos& base_datos, const Usuario& kUsuario);
-void GestionarCerraduras(BaseDatos& base_datos);
-void ConcederAcceso(BaseDatos& base_datos, const Usuario& kUsuario);
+/// Opciones del menú de la app:
 
+// Muestra las opciones del menú por pantalla
+void MostrarMenu(BaseDatos& base_datos, Usuario& usuario);
+// Permite al usuario interactuar con las cerraduras a las que tiene acceso
+void InteractuarCerraduras(BaseDatos& base_datos, const Usuario& kUsuario);
+// Permite añadir o eliminar cerraduras en el sistema
+void GestionarCerraduras(BaseDatos& base_datos);
+// Modifica los permisos de acceso para un usuario específico
+void CambiarPermisos(BaseDatos& base_datos);
+// Permite a cada usuario modificar sus atributos (nombre, contraseña, etc)
+void ModificarCuentaUsuario(BaseDatos& base_datos, Usuario& usuario);
+// Muestra los registros de accesos del sistema
+void ConsultarRegistros(const BaseDatos& kBaseDatos);
+// Solicita contraseñas hasta que se introduzca una segura
+std::string IntroducirContrasenya();
 #endif

@@ -41,10 +41,10 @@ int main() {
   // El usuario se debe identificar
   //const std::string kNombreUsuario = Identificacion(base_datos_leida);
   const std::string kNombreUsuario = "admin";
-  const Usuario& kUsuarioActual = base_datos_leida.BuscarUsuario(kNombreUsuario);
+  Usuario& usuario_actual = base_datos_leida.BuscarUsuario(kNombreUsuario);
   
   // Mostramos el menú
-  MostrarMenu(base_datos_leida, kUsuarioActual);
+  MostrarMenu(base_datos_leida, usuario_actual);
 
   // Guardamos los cambios
   std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);

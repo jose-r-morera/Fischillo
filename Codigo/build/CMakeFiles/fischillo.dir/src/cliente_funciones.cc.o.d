@@ -1,7 +1,7 @@
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: \
- /home/dricen/cerradura_fis/Codigo/src/cliente_funciones.cc \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cliente_funciones.cc \
  /usr/include/stdc-predef.h \
- /home/dricen/cerradura_fis/Codigo/src/cliente_funciones.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cliente_funciones.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -130,7 +130,7 @@ CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/dricen/cerradura_fis/Codigo/src/base_datos.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/base_datos.h \
  /usr/include/c++/11/ctime /usr/include/c++/11/iostream \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
@@ -157,18 +157,18 @@ CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/dricen/cerradura_fis/Codigo/src/cerradura_inteligente.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/cerradura_inteligente.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/dricen/cerradura_fis/Codigo/src/excepcion.h \
- /home/dricen/cerradura_fis/Codigo/src/usuario.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/excepcion.h \
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/usuario.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
- /home/dricen/cerradura_fis/Codigo/src/colores.h
+ /home/hugohdezm2003/Trabajo_Grupal_FIS/Codigo/src/colores.h

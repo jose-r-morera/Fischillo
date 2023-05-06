@@ -68,11 +68,11 @@ add_executable(fischillo
     src/cerradura_inteligente.cc
     src/usuario.cc)
 
-add_executable(funciona
+add_executable(debug
     src/cerradura_inteligente.cc
     src/usuario.cc
     src/base_datos.cc
-    src/funciona.cc)
+    src/debug.cc)
     
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 

@@ -32,11 +32,11 @@ TEST(TestBaseDatos, InsercionesDeAccesos) {
   BaseDatos base_de_datos;
   Usuario nuevo_usuario("platinita", "1234567");
   CerraduraInteligente nueva_cerradura(base_de_datos.NuevoId(), "cerradurita");
-  acceso acceso1(nuevo_usuario, nueva_cerradura, "abrir");
+  acceso acceso1(nuevo_usuario.GetNombreUsuario(), nueva_cerradura.Id(), "abrir");
   base_de_datos.Insertar(acceso1);
   EXPECT_EQ(base_de_datos.GetAccesos().size(), 1);
-  EXPECT_EQ(base_de_datos.GetAccesos()[0].usuario_.GetNombreUsuario(), "platinita");
-  EXPECT_EQ(base_de_datos.GetAccesos()[0].cerradura_.Id(), 1001);
+  EXPECT_EQ(base_de_datos.GetAccesos()[0].usuario_, "platinita");
+  EXPECT_EQ(base_de_datos.GetAccesos()[0].cerradura_, 1001);
   EXPECT_EQ(base_de_datos.GetAccesos()[0].accion_, "abrir");
 }
 
@@ -85,19 +85,19 @@ TEST(TestBaseDatos, ObtenerRegistros) {
   Usuario usuario2("Valerio", "1234567");
   CerraduraInteligente cerradura1(base_de_datos.NuevoId(), "cerradurita");
   CerraduraInteligente cerradura2(base_de_datos.NuevoId(), "fischillo");
-  acceso acceso1(usuario1, cerradura1, "abrir");
-  acceso acceso2(usuario2, cerradura2, "cerrar");
+  acceso acceso1(usuario1.GetNombreUsuario(), cerradura1.Id(), "abrir");
+  acceso acceso2(usuario2.GetNombreUsuario(), cerradura2.Id(), "cerrar");
   base_de_datos.Insertar(acceso1);
   base_de_datos.Insertar(acceso2);
   std::vector<acceso> busqueda1 = base_de_datos.ObtenerRegistro("platinita");
   std::vector<acceso> busqueda2 = base_de_datos.ObtenerRegistro(1002);
   EXPECT_EQ(busqueda1.size(), 1);
-  EXPECT_EQ(busqueda1[0].usuario_.GetNombreUsuario(), "platinita");
-  EXPECT_EQ(busqueda1[0].cerradura_.Nombre(), "cerradurita");
+  EXPECT_EQ(busqueda1[0].usuario_, "platinita");
+  EXPECT_EQ(busqueda1[0].cerradura_, 1001);
   EXPECT_EQ(busqueda1[0].accion_, "abrir");
   EXPECT_EQ(busqueda2.size(), 1);
-  EXPECT_EQ(busqueda2[0].usuario_.GetNombreUsuario(), "Valerio");
-  EXPECT_EQ(busqueda2[0].cerradura_.Nombre(), "fischillo");
+  EXPECT_EQ(busqueda2[0].usuario_, "Valerio");
+  EXPECT_EQ(busqueda2[0].cerradura_, 1002);
   EXPECT_EQ(busqueda2[0].accion_, "cerrar");
 }
 
