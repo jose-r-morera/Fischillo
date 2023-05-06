@@ -23,6 +23,7 @@
 #include <fstream>
 #include <iostream>
 
+#include "identificacion.h"
 #include "base_datos.h"
 #include "cliente_funciones.h"
 #include "colores.h"
@@ -39,8 +40,7 @@ int main() {
   ifs.close();
 
   // El usuario se debe identificar
-  // const std::string kNombreUsuario = Identificacion(base_datos_leida);
-  const std::string kNombreUsuario = "admin";
+  const std::string kNombreUsuario = Identificacion(base_datos_leida);
   Usuario& usuario_actual = base_datos_leida.BuscarUsuario(kNombreUsuario);
 
   // Mostramos el menú

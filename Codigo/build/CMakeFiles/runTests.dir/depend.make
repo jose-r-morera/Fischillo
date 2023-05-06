@@ -4,6 +4,7 @@
 CMakeFiles/runTests.dir/src/base_datos.cc.o: ../src/base_datos.cc
 CMakeFiles/runTests.dir/src/base_datos.cc.o: ../src/base_datos.h
 CMakeFiles/runTests.dir/src/base_datos.cc.o: ../src/cerradura_inteligente.h
+CMakeFiles/runTests.dir/src/base_datos.cc.o: ../src/colores.h
 CMakeFiles/runTests.dir/src/base_datos.cc.o: ../src/excepcion.h
 CMakeFiles/runTests.dir/src/base_datos.cc.o: ../src/usuario.h
 

@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
-base_datos.h
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
-
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
 ctime
 -
@@ -30,11 +26,45 @@ fstream
 iostream
 -
 
+/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc
+cliente_funciones.h
+/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
+unistd.h
+-
+iostream
+-
+limits
+-
+colores.h
+/home/jr/Desktop/SmartLock/Codigo/src/colores.h
+identificacion.h
+/home/jr/Desktop/SmartLock/Codigo/src/identificacion.h
+
+/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
+string
+-
+base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+usuario.h
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+
+/home/jr/Desktop/SmartLock/Codigo/src/colores.h
+iostream
+-
+
 /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
 exception
 -
 iostream
 -
+
+/home/jr/Desktop/SmartLock/Codigo/src/identificacion.h
+string
+-
+base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+usuario.h
+/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 fstream

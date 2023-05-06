@@ -4,6 +4,7 @@
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/base_datos.cc
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/base_datos.h
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/cerradura_inteligente.h
+CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/colores.h
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/excepcion.h
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/usuario.h
 
@@ -16,6 +17,7 @@ CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/cliente.cc
 CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/cliente_funciones.h
 CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/colores.h
 CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/excepcion.h
+CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/identificacion.h
 CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/usuario.h
 
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/base_datos.h

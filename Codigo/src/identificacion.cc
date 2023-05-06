@@ -48,6 +48,7 @@ std::string Identificacion(BaseDatos &base_de_datos) {
               << CYAN << "a.- " << RESET << "Registrarse.\n"
               << CYAN << "b.- " << RESET << "Iniciar sesión.\n";
     std::cin >> opcion;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     system("clear");
 
     switch (opcion) {

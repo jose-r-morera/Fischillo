@@ -60,7 +60,7 @@ void MostrarMenu(BaseDatos &base_datos, Usuario &usuario) {
                 << CYAN << "5. " << RESET << "Consultar registros\n"
                 << CYAN << "6. " << RESET << "Salir\n\n";
     } else {
-      std::cout << ITALIC << BOLD << PURPLE << "Bienvenido " << UNDERLINE
+      std::cout << ITALIC << BOLD << PURPLE << "Bienvenido " << UNDERLINE << AQUA
                 << usuario.GetNombreUsuario() << "\n\n"
                 << RESET;
       std::cout << CYAN << "1. " << RESET << "Interactuar con cerraduras\n"
@@ -440,9 +440,9 @@ void CambiarPermisos(BaseDatos &base_datos) {
  * @param base_datos
  */
 void CambiarNombreUsuario(BaseDatos &base_datos, Usuario &usuario) {
-  std::cout << "Introduzca el nuevo nombre de usuario:" << std::endl;
   std::string nuevo_nombre_usuario_1{"1"}, nuevo_nombre_usuario_2{""};
   while (nuevo_nombre_usuario_1 != nuevo_nombre_usuario_2) {
+    std::cout << "Introduzca el nuevo nombre de usuario:" << std::endl;
     std::cin >> nuevo_nombre_usuario_1;
     while (base_datos.ExisteUsuario(nuevo_nombre_usuario_1)) {
       std::cerr << RED

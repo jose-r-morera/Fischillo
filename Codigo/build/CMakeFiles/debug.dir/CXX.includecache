@@ -9,6 +9,8 @@
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
 base_datos.h
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+colores.h
+/home/jr/Desktop/SmartLock/Codigo/src/colores.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
 ctime
@@ -27,6 +29,10 @@ usuario.h
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
 fstream
 -
+iostream
+-
+
+/home/jr/Desktop/SmartLock/Codigo/src/colores.h
 iostream
 -
 

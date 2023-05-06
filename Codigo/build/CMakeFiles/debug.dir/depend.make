@@ -4,6 +4,7 @@
 CMakeFiles/debug.dir/src/base_datos.cc.o: ../src/base_datos.cc
 CMakeFiles/debug.dir/src/base_datos.cc.o: ../src/base_datos.h
 CMakeFiles/debug.dir/src/base_datos.cc.o: ../src/cerradura_inteligente.h
+CMakeFiles/debug.dir/src/base_datos.cc.o: ../src/colores.h
 CMakeFiles/debug.dir/src/base_datos.cc.o: ../src/excepcion.h
 CMakeFiles/debug.dir/src/base_datos.cc.o: ../src/usuario.h
 
