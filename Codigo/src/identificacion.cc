@@ -45,20 +45,20 @@ std::string Identificacion(BaseDatos &base_de_datos) {
   std::string nombre_usuario{""};
   while (nombre_usuario == "") {
     std::cout << "Debe identificarse\n\n"
-                 "a) Registrarse\n"
-                 "b) Iniciar sesión\n";
+              << CYAN << "a.- " << RESET << "Registrarse.\n"
+              << CYAN << "b.- " << RESET << "Iniciar sesión.\n";
     std::cin >> opcion;
     system("clear");
 
     switch (opcion) {
       case 'a': {
-        std::cout << "- Registrarse -\n";
+        std::cout << PURPLE << "- Registrarse -\n" << RESET;
         /// Creamos un nuevo usuario
         nombre_usuario = Registrarse(base_de_datos);
       } break;
       // En caso de que el usuario decida iniciar sesión,
       case 'b': {
-        std::cout << "- Iniciar sesión -\n";
+        std::cout << PURPLE << "- Iniciar sesión -\n" << RESET;
         // Intentamos iniciar sesión
         nombre_usuario = IniciarSesion(base_de_datos);
       } break;
@@ -96,8 +96,7 @@ std::string IntroducirContrasenya() {
 }
 
 /**
- * @brief
- *        se solicita la contraseña, que debe tener una longitud mínima. Emplea
+ * @brief se solicita la contraseña, que debe tener una longitud mínima. Emplea
  * la función auxiliar IntroducirContrasenya.
  *
  * @param[out] base_de_datos la base de datos en la que se almacena el nuevo
@@ -106,7 +105,7 @@ std::string IntroducirContrasenya() {
  * se haya abortado el registro.
  */
 std::string Registrarse(BaseDatos &base_de_datos) {
-  std::cout << "Ha seleccionado la opción: registrarse\n\n";
+  std::cout << "Ha seleccionado la opción: " << PURPLE << "registrarse\n\n" << RESET;
   // Solicitamos un nombre de usuario hasta que sea válido o se solicite salir
   const std::string kPalabraSalir{"salir"};
   bool nombre_valido{false};
@@ -132,7 +131,7 @@ std::string Registrarse(BaseDatos &base_de_datos) {
   Usuario nuevo_usuario{nuevo_nombre_usuario, kContrasenya};
   base_de_datos.Insertar(nuevo_usuario);
 
-  std::cout << LGREEN << "Usuario registrado correctamente\n";
+  std::cout << LGREEN << "Usuario registrado correctamente\n" << RESET;
   sleep(2);
   return nuevo_usuario.GetNombreUsuario();
 }

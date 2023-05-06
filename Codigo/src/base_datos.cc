@@ -24,6 +24,7 @@
  */
 
 #include "base_datos.h"
+#include "colores.h"
 
 void acceso::Serialize(std::ostream& os) const {
   // Serializa usuario_
@@ -74,7 +75,13 @@ void acceso::Deserialize(std::istream& is) {
 std::ostream& operator<<(std::ostream& out, const acceso& kAcceso) {
   std::string texto_fecha{asctime(localtime(&kAcceso.time_))};
   texto_fecha.pop_back();
-  out << kAcceso.usuario_ << " -> " << kAcceso.cerradura_ << " " << kAcceso.accion_ << " (" << texto_fecha << ")\n";
+  out << BLUE << kAcceso.usuario_ << RESET << " -> " << CYAN << kAcceso.cerradura_ 
+      << RESET;
+  if (kAcceso.accion_ == "Abrir") {
+    out << " " << LGREEN << kAcceso.accion_ << RESET << " (" << texto_fecha << ")\n";
+  } else if (kAcceso.accion_ == "Cerrar") {
+    out << " " << RED << kAcceso.accion_ << RESET << " (" << texto_fecha << ")\n";
+  }
   return out;
 }
 
