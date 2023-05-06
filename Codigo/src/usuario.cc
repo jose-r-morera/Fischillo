@@ -24,7 +24,9 @@
 #include "usuario.h"
 
 /**
- * @brief Asigna las cerraduras a las que tiene permitido el acceso el usuario
+ * @brief Añade una nueva cerradura al vector de cerraduras permitidas del usuario
+ *        Solo añade cerraduras que no estuvieran, para evitar duplicidades.
+ * @param id_cerradura la id de la cerradura a añadir
  */
 void Usuario::PermitirAccesoCerradura(unsigned id_cerradura) {
   // Se utiliza un booleano que compruebe si la id ya pertenece al vector de accesos del usuario
@@ -54,6 +56,7 @@ void Usuario::Serialize(std::ostream& os) const {
   std::size_t cerraduras_size = cerraduras_permitidas_.size();
   os.write(reinterpret_cast<const char*>(&cerraduras_size), sizeof(cerraduras_size));
   os.write(reinterpret_cast<const char*>(cerraduras_permitidas_.data()), cerraduras_size * sizeof(int));
+  
   // Serialize administrador_
   os.write(reinterpret_cast<const char*>(&administrador_), sizeof(administrador_));
 }

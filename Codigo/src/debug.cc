@@ -32,6 +32,7 @@ int main() {
   std::cin >> entrada;
   if (entrada == "a") {
     BaseDatos base_datos_nueva{};
+    base_datos_nueva.Insertar(Usuario{"admin", "1234", true});
     // Open a file for writing
     std::ofstream ofs(kFicheroBaseDatos, std::ios::binary);
     // Serialize the object to the file

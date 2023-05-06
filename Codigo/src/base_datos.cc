@@ -27,14 +27,14 @@
 
 /**
  * @brief Insertar Usuarios en la base de datos
- * 
+ *
  * @param nuevo_usuario Usuario a insertar en la base de datos
  * @return true Se ha completado la inserción correctamente
  * @return false No se ha completado la inserción (nombre de usuario ya existe)
  */
 bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
   // Comprueba que el id no se haya usado
-  for (const auto& usuario : usuarios_)  {
+  for (const auto& usuario : usuarios_) {
     if (usuario.GetNombreUsuario() == nuevo_usuario.GetNombreUsuario()) {
       return false;
     }
@@ -45,14 +45,14 @@ bool BaseDatos::Insertar(const Usuario& nuevo_usuario) {
 
 /**
  * @brief Insertar nueva cerradura en la base de datos
- * 
+ *
  * @param nueva_cerradura Cerradura a insertar en la base de datos
  * @return true Se ha completado la inserción correctamente
  * @return false No se ha completado la inserción (id de cerradura ya existe)
  */
 bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
   // Comprueba que el id no se haya usado
-  for (const auto& cerradura : cerraduras_)  {
+  for (const auto& cerradura : cerraduras_) {
     if (cerradura.Id() == nueva_cerradura.Id()) {
       return false;
     }
@@ -63,7 +63,7 @@ bool BaseDatos::Insertar(const CerraduraInteligente& nueva_cerradura) {
 
 /**
  * @brief Insertar un nuevo acceso en la base de datos
- * 
+ *
  * @param nuevo_acceso Acceso a insertar en la base de datos
  * @return true Se ha completado la inserción correctamente
  * @return false No se ha completado la insertación (no pasa nunca)
@@ -75,7 +75,7 @@ bool BaseDatos::Insertar(const acceso& nuevo_acceso) {
 
 /**
  * @brief Elimina el usuario que coincida con el nombre de usuario introducido
- * 
+ *
  * @param nombre_usuario Nombre del usuario a eliminar
  * @return true Se ha eliminado el usuario correctamente
  * @return false No se ha eliminado el usuario (no coincide ningún nombre de usuario)
@@ -92,7 +92,7 @@ bool BaseDatos::EliminarUsuario(const std::string& nombre_usuario) {
 
 /**
  * @brief Elimina la cerradura que coincida con el id
- * 
+ *
  * @param id Id de la cerradura a eliminar
  * @return true Se ha eliminado la cerradura correctamente
  * @return false No se ha eliminado la cerradura (no coincide ningún id)
@@ -112,13 +112,13 @@ bool BaseDatos::EliminarCerradura(const unsigned id) {
 
 /**
  * @brief Obtiene todos los accesos que contengan la id de la cerradura dada
- * 
+ *
  * @param id Id de la cerradura a buscar
  * @return std::vector<acceso> Vector de los accesos que contengan el id
  */
 std::vector<acceso> BaseDatos::ObtenerRegistro(const unsigned id) const {
   std::vector<acceso> registro{};
-  for (const auto& acceso : accesos_)  {
+  for (const auto& acceso : accesos_) {
     if (acceso.cerradura_ == id) {
       registro.emplace_back(acceso);
     }
@@ -128,13 +128,13 @@ std::vector<acceso> BaseDatos::ObtenerRegistro(const unsigned id) const {
 
 /**
  * @brief Obtiene todos los accesos que contengan el nombre de usuario dado
- * 
+ *
  * @param nombre Nombre a buscar
  * @return std::vector<acceso> Vector de accesos con coincidencias de nombre
  */
 std::vector<acceso> BaseDatos::ObtenerRegistro(const std::string& nombre) const {
   std::vector<acceso> registro{};
-  for (const auto& acceso : accesos_)  {
+  for (const auto& acceso : accesos_) {
     if (acceso.usuario_ == nombre) {
       registro.emplace_back(acceso);
     }
@@ -144,7 +144,7 @@ std::vector<acceso> BaseDatos::ObtenerRegistro(const std::string& nombre) const 
 
 /**
  * @brief Serializa la base de datos para poder almacenarla
- * 
+ *
  * @param os Referencia a un flujo de salida
  */
 void BaseDatos::Serialize(std::ostream& os) const {
@@ -153,7 +153,6 @@ void BaseDatos::Serialize(std::ostream& os) const {
   os.write(reinterpret_cast<const char*>(&usuarios_size), sizeof(usuarios_size));
   for (const auto& usuario : usuarios_) {
     // Serialize each Usuario object
-    // Note: implement serialize() function for Usuario class
     usuario.Serialize(os);
   }
 
@@ -162,7 +161,6 @@ void BaseDatos::Serialize(std::ostream& os) const {
   os.write(reinterpret_cast<const char*>(&cerraduras_size), sizeof(cerraduras_size));
   for (const auto& cerradura : cerraduras_) {
     // Serialize each CerraduraInteligente object
-    // Note: implement serialize() function for CerraduraInteligente class
     cerradura.Serialize(os);
   }
 
@@ -177,7 +175,7 @@ void BaseDatos::Serialize(std::ostream& os) const {
 
 /**
  * @brief Deserializa la base de datos
- * 
+ *
  * @param is Referencia al flujo de entrada
  */
 void BaseDatos::Deserialize(std::istream& is) {
@@ -211,7 +209,7 @@ void BaseDatos::Deserialize(std::istream& is) {
 
 /**
  * @brief Comprueba si existe un usuario con ese nombre de usuario
- * 
+ *
  * @param nombre_usuario Nombre de usuario a buscar
  * @return true Existe
  * @return false No existe
@@ -227,7 +225,7 @@ bool BaseDatos::ExisteUsuario(const std::string& nombre_usuario) const {
 
 /**
  * @brief Devuelve una referencia constante al usuario que coincide con el nombre introducido
- * 
+ *
  * @param nombre_usuario Nombre introducido
  * @return const Usuario& Usuario con el nombre de usuario solicitado
  */
@@ -247,7 +245,7 @@ const Usuario& BaseDatos::BuscarUsuario(const std::string& nombre_usuario) const
 
 /**
  * @brief Devuelve una referencia al usuario que coincide con el nombre introducido
- * 
+ *
  * @param nombre_usuario Nombre introducido
  * @return Usuario& Usuario con el nombre de usuario solicitado
  */
@@ -266,7 +264,7 @@ Usuario& BaseDatos::BuscarUsuario(const std::string& nombre_usuario) {
 
 /**
  * @brief Comprueba si existe una cerradura con el Id dado
- * 
+ *
  * @param id Id a buscar
  * @return true Existe una cerradura con el Id dado
  * @return false No existe cerradura con el Id dado
@@ -282,7 +280,7 @@ bool BaseDatos::ExisteCerradura(const unsigned id) const {
 
 /**
  * @brief Devuelve una referencia a la cerradura con el Id solicitado
- * 
+ *
  * @param id Id a buscar
  * @return CerraduraInteligente& Cerradura con la Id solicitada
  */

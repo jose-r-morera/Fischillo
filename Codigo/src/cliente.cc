@@ -30,7 +30,7 @@
 int main() {
   system("clear");
   std::cout << GREEN << "Bienvenido a Smartlock\n\n" << RESET;
-  
+
   // Leemos la base de datos del fichero que la contiene
   const std::string kFicheroBaseDatos{"base.datos"};
   std::ifstream ifs(kFicheroBaseDatos, std::ios::binary);
@@ -39,10 +39,10 @@ int main() {
   ifs.close();
 
   // El usuario se debe identificar
-  //const std::string kNombreUsuario = Identificacion(base_datos_leida);
+  // const std::string kNombreUsuario = Identificacion(base_datos_leida);
   const std::string kNombreUsuario = "admin";
   Usuario& usuario_actual = base_datos_leida.BuscarUsuario(kNombreUsuario);
-  
+
   // Mostramos el menú
   MostrarMenu(base_datos_leida, usuario_actual);
 
@@ -52,6 +52,6 @@ int main() {
   base_datos_leida.Serialize(ofs);
   // Cerrramos el fichero
   ofs.close();
-
-  return 0; 
+  
+  return 0;
 }
