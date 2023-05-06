@@ -24,10 +24,6 @@ excepcion.h
 usuario.h
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 
-/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc
-cerradura_inteligente.h
-/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
-
 /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
 fstream
 -
@@ -43,16 +39,6 @@ base_datos.h
 /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
 cliente_funciones.h
 /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
-colores.h
-/home/jr/Desktop/SmartLock/Codigo/src/colores.h
-
-/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc
-cliente_funciones.h
-/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
-unistd.h
--
-iostream
--
 colores.h
 /home/jr/Desktop/SmartLock/Codigo/src/colores.h
 
@@ -73,10 +59,6 @@ exception
 -
 iostream
 -
-
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.cc
-usuario.h
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 
 /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 fstream
