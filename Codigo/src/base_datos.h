@@ -40,11 +40,19 @@ struct acceso {
       : usuario_{nombre_usuario}, cerradura_{id_cerradura}, accion_{accion} {
     time(&time_);
   }
+
+  // Serializar
+  void Serialize(std::ostream& os) const;
+  // Deserializar
+  void Deserialize(std::istream& is);
+
   std::string usuario_{};
   unsigned cerradura_{};
   std::string accion_{};
   time_t time_{};
 };
+
+std::ostream& operator<<(std::ostream& out, const acceso& kAcceso);
 
 class BaseDatos {
  public:

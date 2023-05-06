@@ -24,7 +24,17 @@ CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/cliente_funciones.cc
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/cliente_funciones.h
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/colores.h
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/excepcion.h
+CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/identificacion.h
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/usuario.h
+
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/base_datos.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/cerradura_inteligente.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/cliente_funciones.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/colores.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/excepcion.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/identificacion.cc
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/identificacion.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/usuario.h
 
 CMakeFiles/fischillo.dir/src/usuario.cc.o: ../src/cerradura_inteligente.h
 CMakeFiles/fischillo.dir/src/usuario.cc.o: ../src/usuario.cc

@@ -53,6 +53,7 @@ add_executable(runTests
     test/test_base_datos.cc
     test/test_usuarios.cc
     src/cliente_funciones.cc
+    src/identificacion.cc
     src/base_datos.cc
     src/cerradura_inteligente.cc
     src/usuario.cc)
@@ -64,6 +65,7 @@ add_executable(runTests
 add_executable(fischillo
     src/cliente.cc
     src/cliente_funciones.cc
+    src/identificacion.cc
     src/base_datos.cc
     src/cerradura_inteligente.cc
     src/usuario.cc)

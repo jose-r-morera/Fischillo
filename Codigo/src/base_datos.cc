@@ -25,6 +25,59 @@
 
 #include "base_datos.h"
 
+void acceso::Serialize(std::ostream& os) const {
+  // Serializa usuario_
+  std::size_t nombre_size = usuario_.size();
+  os.write(reinterpret_cast<const char*>(&nombre_size), sizeof(nombre_size));
+  os.write(usuario_.data(), nombre_size);
+
+  // Serializa cerradura_
+  os.write(reinterpret_cast<const char*>(&cerradura_), sizeof(cerradura_));
+
+  // Serializa accion_
+  std::size_t accion_size = accion_.size();
+  os.write(reinterpret_cast<const char*>(&accion_size), sizeof(accion_size));
+  os.write(accion_.data(), accion_size);
+
+  // Serializa time_
+  os.write(reinterpret_cast<const char*>(&time_), sizeof(time_));
+}
+
+
+void acceso::Deserialize(std::istream& is) {
+  // Deserializa usuario_
+  std::size_t nombre_size;
+  is.read(reinterpret_cast<char*>(&nombre_size), sizeof(nombre_size));
+  usuario_.resize(nombre_size);
+  is.read(&usuario_[0], nombre_size);
+
+  // Deserializa cerradura_
+  is.read(reinterpret_cast<char*>(&cerradura_), sizeof(cerradura_));
+
+  // Deserializa accion_
+  std::size_t accion_size;
+  is.read(reinterpret_cast<char*>(&accion_size), sizeof(accion_size));
+  accion_.resize(accion_size);
+  is.read(&accion_[0], accion_size);
+
+  // Deserializa time_
+  is.read(reinterpret_cast<char*>(&time_), sizeof(time_));
+}
+
+/**
+ * @brief Sobrecarga del operador de inserción de flujo para el tipo acceso
+ *
+ * @param out el flujo de salida
+ * @param kAcceso el objeto que se muestra
+ * @return el flujo
+ */
+std::ostream& operator<<(std::ostream& out, const acceso& kAcceso) {
+  std::string texto_fecha{asctime(localtime(&kAcceso.time_))};
+  texto_fecha.pop_back();
+  out << kAcceso.usuario_ << " -> " << kAcceso.cerradura_ << " " << kAcceso.accion_ << " (" << texto_fecha << ")\n";
+  return out;
+}
+
 /**
  * @brief Insertar Usuarios en la base de datos
  *
@@ -167,7 +220,10 @@ void BaseDatos::Serialize(std::ostream& os) const {
   // Serialize accesos_
   std::size_t accesos_size = accesos_.size();
   os.write(reinterpret_cast<const char*>(&accesos_size), sizeof(accesos_size));
-  os.write(reinterpret_cast<const char*>(accesos_.data()), accesos_size * sizeof(acceso));
+  for (const auto& acceso : accesos_) {
+    // Serialize each acceso object
+    acceso.Serialize(os);
+  }
 
   // Serialize contador_id_
   os.write(reinterpret_cast<const char*>(&contador_id_), sizeof(contador_id_));
@@ -201,7 +257,10 @@ void BaseDatos::Deserialize(std::istream& is) {
   std::size_t accesos_size;
   is.read(reinterpret_cast<char*>(&accesos_size), sizeof(accesos_size));
   accesos_.resize(accesos_size);
-  is.read(reinterpret_cast<char*>(accesos_.data()), accesos_size * sizeof(acceso));
+    for (auto& acceso : accesos_) {
+    // Serialize each acceso object
+    acceso.Deserialize(is);
+  }
 
   // Deserialize contador_id_
   is.read(reinterpret_cast<char*>(&contador_id_), sizeof(contador_id_));

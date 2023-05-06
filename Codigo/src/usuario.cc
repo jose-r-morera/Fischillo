@@ -44,7 +44,7 @@ void Usuario::PermitirAccesoCerradura(unsigned id_cerradura) {
 }
 
 void Usuario::Serialize(std::ostream& os) const {
-  // Serialize nombre_usuario_
+  // Serialize nombre_usuario_ (un string)
   std::size_t nombre_size = nombre_usuario_.size();
   os.write(reinterpret_cast<const char*>(&nombre_size), sizeof(nombre_size));
   os.write(nombre_usuario_.data(), nombre_size);
@@ -52,7 +52,7 @@ void Usuario::Serialize(std::ostream& os) const {
   // Serialize contrasenya_
   os.write(reinterpret_cast<const char*>(&contrasenya_), sizeof(contrasenya_));
 
-  // Serialize cerraduras_permitidas_
+  // Serialize cerraduras_permitidas_ (un vector de ints)
   std::size_t cerraduras_size = cerraduras_permitidas_.size();
   os.write(reinterpret_cast<const char*>(&cerraduras_size), sizeof(cerraduras_size));
   os.write(reinterpret_cast<const char*>(cerraduras_permitidas_.data()), cerraduras_size * sizeof(int));

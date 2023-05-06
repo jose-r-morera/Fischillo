@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc" "/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o"
   "/home/jr/Desktop/SmartLock/Codigo/src/cliente.cc" "/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir/src/cliente.cc.o"
   "/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc" "/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o"
+  "/home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc" "/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir/src/identificacion.cc.o"
   "/home/jr/Desktop/SmartLock/Codigo/src/usuario.cc" "/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir/src/usuario.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

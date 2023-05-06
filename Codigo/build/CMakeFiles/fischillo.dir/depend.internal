@@ -25,6 +25,16 @@ CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o
  /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
  /home/jr/Desktop/SmartLock/Codigo/src/colores.h
  /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
+ /home/jr/Desktop/SmartLock/Codigo/src/identificacion.h
+ /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+CMakeFiles/fischillo.dir/src/identificacion.cc.o
+ /home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+ /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+ /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
+ /home/jr/Desktop/SmartLock/Codigo/src/colores.h
+ /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
+ /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc
+ /home/jr/Desktop/SmartLock/Codigo/src/identificacion.h
  /home/jr/Desktop/SmartLock/Codigo/src/usuario.h
 CMakeFiles/fischillo.dir/src/usuario.cc.o
  /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h

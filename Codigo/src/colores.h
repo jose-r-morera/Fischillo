@@ -39,6 +39,7 @@
 #define ORANGE  "\x1B[38;2;255;128;0m"
 #define ROSE    "\x1B[38;2;255;151;203m"
 #define LBLUE   "\x1B[38;2;53;149;240m"
+#define AQUA   "\x1B[38;2;0;180;200m"
 #define LGREEN  "\x1B[38;2;17;245;120m"
 #define GRAY    "\x1B[38;2;176;174;174m"
 #define PURPLE  "\x1B[38;2;128;0;128m"

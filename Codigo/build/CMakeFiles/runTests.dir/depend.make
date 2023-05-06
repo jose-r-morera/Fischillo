@@ -16,7 +16,17 @@ CMakeFiles/runTests.dir/src/cliente_funciones.cc.o: ../src/cliente_funciones.cc
 CMakeFiles/runTests.dir/src/cliente_funciones.cc.o: ../src/cliente_funciones.h
 CMakeFiles/runTests.dir/src/cliente_funciones.cc.o: ../src/colores.h
 CMakeFiles/runTests.dir/src/cliente_funciones.cc.o: ../src/excepcion.h
+CMakeFiles/runTests.dir/src/cliente_funciones.cc.o: ../src/identificacion.h
 CMakeFiles/runTests.dir/src/cliente_funciones.cc.o: ../src/usuario.h
+
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/base_datos.h
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/cerradura_inteligente.h
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/cliente_funciones.h
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/colores.h
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/excepcion.h
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/identificacion.cc
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/identificacion.h
+CMakeFiles/runTests.dir/src/identificacion.cc.o: ../src/usuario.h
 
 CMakeFiles/runTests.dir/src/usuario.cc.o: ../src/cerradura_inteligente.h
 CMakeFiles/runTests.dir/src/usuario.cc.o: ../src/usuario.cc

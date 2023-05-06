@@ -105,12 +105,12 @@ CMakeFiles/debug.dir/clean:
 CMakeFiles/fischillo.dir/all:
 	$(MAKE) -f CMakeFiles/fischillo.dir/build.make CMakeFiles/fischillo.dir/depend
 	$(MAKE) -f CMakeFiles/fischillo.dir/build.make CMakeFiles/fischillo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=6,7,8,9,10,11 "Built target fischillo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=6,7,8,9,10,11,12 "Built target fischillo"
 .PHONY : CMakeFiles/fischillo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fischillo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fischillo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles 0
 .PHONY : CMakeFiles/fischillo.dir/rule
@@ -132,12 +132,12 @@ CMakeFiles/fischillo.dir/clean:
 CMakeFiles/runTests.dir/all:
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/depend
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20 "Built target runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22 "Built target runTests"
 .PHONY : CMakeFiles/runTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/runTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles 0
 .PHONY : CMakeFiles/runTests.dir/rule

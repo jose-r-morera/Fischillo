@@ -29,12 +29,6 @@
 #include "base_datos.h"
 #include "usuario.h"
 
-// Retorna la ID del usuario
-std::string Identificacion(BaseDatos& base_de_datos);
-
-// Opciones de identificación
-std::string Registrarse(BaseDatos& base_de_datos);
-std::string IniciarSesion(const BaseDatos& kBaseDeDatos);
 
 /// Opciones del menú de la app:
 
@@ -50,6 +44,5 @@ void CambiarPermisos(BaseDatos& base_datos);
 void ModificarCuentaUsuario(BaseDatos& base_datos, Usuario& usuario);
 // Muestra los registros de accesos del sistema
 void ConsultarRegistros(const BaseDatos& kBaseDatos);
-// Solicita contraseñas hasta que se introduzca una segura
-std::string IntroducirContrasenya();
+
 #endif
