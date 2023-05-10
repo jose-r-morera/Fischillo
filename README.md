@@ -10,7 +10,7 @@ Hay dos roles de usuario: **administrador** y **usuario**.
 # *Administrador*
 Existe un usuario administrador preconfigurado, con permisos especiales.
 
-Para probar el programa desde el aspecto del usuario normal, puede introducir las siguientes credenciales:
+Para probar el programa desde el aspecto del asministrador, puede introducir las siguientes credenciales:
 - Usuario: **admin**
 - Contraseña: **12345**
 
