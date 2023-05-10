@@ -13,7 +13,7 @@
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
  * @date    12/04/2023
  * @file    debug.cc
- * @brief   Programa cliente. Aplicación para la gestión de cerraduras inteligentes.
+ * @brief   Programa para que los desarrolladores depuren la base de datos.
  *
  * @see
  *
