@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jr/Desktop/SmartLock/Codigo
+CMAKE_SOURCE_DIR = /home/usuario/2o_cuatri/FIS/Fischillo/Codigo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jr/Desktop/SmartLock/Codigo/build
+CMAKE_BINARY_DIR = /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fischillo.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/fischillo.dir/flags.make
 
 CMakeFiles/fischillo.dir/src/cliente.cc.o: CMakeFiles/fischillo.dir/flags.make
 CMakeFiles/fischillo.dir/src/cliente.cc.o: ../src/cliente.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fischillo.dir/src/cliente.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/cliente.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cliente.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fischillo.dir/src/cliente.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/cliente.cc.o -c /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente.cc
 
 CMakeFiles/fischillo.dir/src/cliente.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fischillo.dir/src/cliente.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/cliente.cc > CMakeFiles/fischillo.dir/src/cliente.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente.cc > CMakeFiles/fischillo.dir/src/cliente.cc.i
 
 CMakeFiles/fischillo.dir/src/cliente.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fischillo.dir/src/cliente.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/cliente.cc -o CMakeFiles/fischillo.dir/src/cliente.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente.cc -o CMakeFiles/fischillo.dir/src/cliente.cc.s
 
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: CMakeFiles/fischillo.dir/flags.make
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o: ../src/cliente_funciones.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o -c /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente_funciones.cc
 
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fischillo.dir/src/cliente_funciones.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc > CMakeFiles/fischillo.dir/src/cliente_funciones.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente_funciones.cc > CMakeFiles/fischillo.dir/src/cliente_funciones.cc.i
 
 CMakeFiles/fischillo.dir/src/cliente_funciones.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fischillo.dir/src/cliente_funciones.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc -o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente_funciones.cc -o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.s
 
 CMakeFiles/fischillo.dir/src/identificacion.cc.o: CMakeFiles/fischillo.dir/flags.make
 CMakeFiles/fischillo.dir/src/identificacion.cc.o: ../src/identificacion.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fischillo.dir/src/identificacion.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/identificacion.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fischillo.dir/src/identificacion.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/identificacion.cc.o -c /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/identificacion.cc
 
 CMakeFiles/fischillo.dir/src/identificacion.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fischillo.dir/src/identificacion.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc > CMakeFiles/fischillo.dir/src/identificacion.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/identificacion.cc > CMakeFiles/fischillo.dir/src/identificacion.cc.i
 
 CMakeFiles/fischillo.dir/src/identificacion.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fischillo.dir/src/identificacion.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc -o CMakeFiles/fischillo.dir/src/identificacion.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/identificacion.cc -o CMakeFiles/fischillo.dir/src/identificacion.cc.s
 
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: CMakeFiles/fischillo.dir/flags.make
 CMakeFiles/fischillo.dir/src/base_datos.cc.o: ../src/base_datos.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fischillo.dir/src/base_datos.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/base_datos.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fischillo.dir/src/base_datos.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/base_datos.cc.o -c /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/base_datos.cc
 
 CMakeFiles/fischillo.dir/src/base_datos.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fischillo.dir/src/base_datos.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc > CMakeFiles/fischillo.dir/src/base_datos.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/base_datos.cc > CMakeFiles/fischillo.dir/src/base_datos.cc.i
 
 CMakeFiles/fischillo.dir/src/base_datos.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fischillo.dir/src/base_datos.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc -o CMakeFiles/fischillo.dir/src/base_datos.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/base_datos.cc -o CMakeFiles/fischillo.dir/src/base_datos.cc.s
 
 CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o: CMakeFiles/fischillo.dir/flags.make
 CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o: ../src/cerradura_inteligente.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o -c /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cerradura_inteligente.cc
 
 CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc > CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cerradura_inteligente.cc > CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.i
 
 CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc -o CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cerradura_inteligente.cc -o CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.s
 
 CMakeFiles/fischillo.dir/src/usuario.cc.o: CMakeFiles/fischillo.dir/flags.make
 CMakeFiles/fischillo.dir/src/usuario.cc.o: ../src/usuario.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fischillo.dir/src/usuario.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/usuario.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fischillo.dir/src/usuario.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fischillo.dir/src/usuario.cc.o -c /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.cc
 
 CMakeFiles/fischillo.dir/src/usuario.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fischillo.dir/src/usuario.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc > CMakeFiles/fischillo.dir/src/usuario.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.cc > CMakeFiles/fischillo.dir/src/usuario.cc.i
 
 CMakeFiles/fischillo.dir/src/usuario.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fischillo.dir/src/usuario.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc -o CMakeFiles/fischillo.dir/src/usuario.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.cc -o CMakeFiles/fischillo.dir/src/usuario.cc.s
 
 # Object files for target fischillo
 fischillo_OBJECTS = \
@@ -155,7 +155,7 @@ fischillo: CMakeFiles/fischillo.dir/src/cerradura_inteligente.cc.o
 fischillo: CMakeFiles/fischillo.dir/src/usuario.cc.o
 fischillo: CMakeFiles/fischillo.dir/build.make
 fischillo: CMakeFiles/fischillo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable fischillo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable fischillo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fischillo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -168,6 +168,6 @@ CMakeFiles/fischillo.dir/clean:
 .PHONY : CMakeFiles/fischillo.dir/clean
 
 CMakeFiles/fischillo.dir/depend:
-	cd /home/jr/Desktop/SmartLock/Codigo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jr/Desktop/SmartLock/Codigo /home/jr/Desktop/SmartLock/Codigo /home/jr/Desktop/SmartLock/Codigo/build /home/jr/Desktop/SmartLock/Codigo/build /home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/2o_cuatri/FIS/Fischillo/Codigo /home/usuario/2o_cuatri/FIS/Fischillo/Codigo /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build /home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles/fischillo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fischillo.dir/depend
 

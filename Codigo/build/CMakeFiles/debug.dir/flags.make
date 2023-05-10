@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jr/Desktop/SmartLock/Codigo/src 
+CXX_INCLUDES = -I/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src 
 

@@ -21,6 +21,7 @@
  *
  * Historial de revisiones
  *          17/04/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto
  */
 
 #ifndef CERRADURA_INTELIGENTE_H

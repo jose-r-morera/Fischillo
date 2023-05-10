@@ -13,14 +13,13 @@
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
  * @date    22/04/2023
  * @file    base_datos.cc
- * @brief   Implementación de la clase "BaseDatos". Permite almacenar
- *          información.
+ * @brief   Implementación de la clase "BaseDatos". Permite almacenar información.
  *
- *
- * @see
- *
+ * @see     https://www.cs.cmu.edu/~410/doc/doxygen.html
+ * 
  * Historial de revisiones
  *          23/04/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto  
  */
 
 #include "base_datos.h"
@@ -44,7 +43,13 @@ void acceso::Serialize(std::ostream& os) const {
   os.write(reinterpret_cast<const char*>(&time_), sizeof(time_));
 }
 
-
+/**
+ * @brief Deserializa un objeto acceso: lee los datos de un flujo de entrada y los almacena en el objeto acceso
+ * @param is  el flujo de entrada
+ * @return    void
+ * @pre       is debe estar abierto
+ * @post      El objeto acceso queda inicializado con los datos leídos del flujo de entrada
+*/
 void acceso::Deserialize(std::istream& is) {
   // Deserializa usuario_
   std::size_t nombre_size;
@@ -76,7 +81,7 @@ std::ostream& operator<<(std::ostream& out, const acceso& kAcceso) {
   std::string texto_fecha{asctime(localtime(&kAcceso.time_))};
   texto_fecha.pop_back();
   out << BLUE << kAcceso.usuario_ << RESET << " -> " << CYAN << kAcceso.cerradura_ 
-      << RESET;
+      << RESET << ": ";
   if (kAcceso.accion_ == "Abrir") {
     out << " " << LGREEN << kAcceso.accion_ << RESET << " (" << texto_fecha << ")\n";
   } else if (kAcceso.accion_ == "Cerrar") {

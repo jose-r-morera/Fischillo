@@ -19,6 +19,7 @@
  *
  * Historial de revisiones
  *          12/04/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto
  */
 
 #ifndef CLIENTE_FUNCIONES_H
@@ -44,5 +45,7 @@ void CambiarPermisos(BaseDatos& base_datos);
 void ModificarCuentaUsuario(BaseDatos& base_datos, Usuario& usuario);
 // Muestra los registros de accesos del sistema
 void ConsultarRegistros(const BaseDatos& kBaseDatos);
+
+const std::string kTituloProyecto{"Aplicación de gestión de cerraduras inteligentes"};
 
 #endif

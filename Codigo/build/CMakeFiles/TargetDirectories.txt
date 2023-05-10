@@ -1,5 +1,5 @@
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/rebuild_cache.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/edit_cache.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/debug.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/fischillo.dir
-/home/jr/Desktop/SmartLock/Codigo/build/CMakeFiles/runTests.dir
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles/rebuild_cache.dir
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles/edit_cache.dir
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles/debug.dir
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles/fischillo.dir
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/build/CMakeFiles/runTests.dir

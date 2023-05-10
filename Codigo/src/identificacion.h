@@ -19,6 +19,7 @@
  *
  * Historial de revisiones
  *          6/05/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto
  */
 
 #ifndef IDENTIFICACION_H

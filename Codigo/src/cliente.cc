@@ -19,9 +19,12 @@
  *
  * Historial de revisiones
  *          12/04/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto
  */
 #include <fstream>
 #include <iostream>
+#include <signal.h>
+#include <unistd.h>
 
 #include "identificacion.h"
 #include "base_datos.h"
@@ -30,7 +33,9 @@
 
 int main() {
   system("clear");
+  sleep(0.5);
   std::cout << GREEN << "Bienvenido a Smartlock\n\n" << RESET;
+  std::cout << LGREEN << kTituloProyecto << RESET << "\n\n";  
 
   // Leemos la base de datos del fichero que la contiene
   const std::string kFicheroBaseDatos{"base.datos"};

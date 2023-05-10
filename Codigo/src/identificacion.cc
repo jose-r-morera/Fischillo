@@ -19,6 +19,7 @@
  *
  * Historial de revisiones
  *          6/05/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto
  */
 
 
@@ -45,23 +46,30 @@ std::string Identificacion(BaseDatos &base_de_datos) {
   std::string nombre_usuario{""};
   while (nombre_usuario == "") {
     std::cout << "Debe identificarse\n\n"
-              << CYAN << "a.- " << RESET << "Registrarse.\n"
-              << CYAN << "b.- " << RESET << "Iniciar sesión.\n";
+              << YELLOW << "a. " << RESET << "Registrarse.\n"
+              << YELLOW << "b. " << RESET << "Iniciar sesión.\n"
+              << YELLOW << "c. " << RESET << "Salir del programa.\n";
+    std::cout << "\nIntroduzca una opción: ";
     std::cin >> opcion;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     system("clear");
 
     switch (opcion) {
       case 'a': {
-        std::cout << PURPLE << "- Registrarse -\n" << RESET;
-        /// Creamos un nuevo usuario
+        /// Creamos un nuevo usuario mediante la función Registrarse()
         nombre_usuario = Registrarse(base_de_datos);
       } break;
-      // En caso de que el usuario decida iniciar sesión,
+      // En caso de que el usuario decida iniciar sesión, se llama a la función
       case 'b': {
-        std::cout << PURPLE << "- Iniciar sesión -\n" << RESET;
         // Intentamos iniciar sesión
         nombre_usuario = IniciarSesion(base_de_datos);
+      } break;
+      // En caso de que el usuario decida salir, se termina el programa
+      case 'c': {
+        std::cout << LGREEN << "Saliendo..." << RESET << std::endl;
+        sleep(1);
+        system("clear");
+        exit(0);
       } break;
     }
     system("clear");
@@ -106,7 +114,7 @@ std::string IntroducirContrasenya() {
  * se haya abortado el registro.
  */
 std::string Registrarse(BaseDatos &base_de_datos) {
-  std::cout << "Ha seleccionado la opción: " << PURPLE << "registrarse\n\n" << RESET;
+  std::cout << "Ha seleccionado la opción: " << PURPLE << BOLD << "registrarse\n\n" << RESET;
   // Solicitamos un nombre de usuario hasta que sea válido o se solicite salir
   const std::string kPalabraSalir{"salir"};
   bool nombre_valido{false};
@@ -153,6 +161,7 @@ std::string IniciarSesion(const BaseDatos &kBaseDeDatos) {
   const std::string kPalabraSalir{"salir"};
 
   // Comprobamos que el usuario existe
+  std::cout << "Ha seleccionado la opción: " << PURPLE << BOLD << "iniciar sesión\n\n" << RESET;
   do {
     std::cout << "Introduzca su nombre de usuario o " << kPalabraSalir << ": ";
     std::cin >> nombre_usuario;
@@ -177,8 +186,7 @@ std::string IniciarSesion(const BaseDatos &kBaseDeDatos) {
     sleep(2);  // esperamos 2 segundos
     std::cout << LGREEN << "Inicio de sesión correcto\n" << RESET;
     sleep(2);
-    return usuario.GetNombreUsuario();  // devolvemos el nombre del usuario que
-                                        // se ha identificado
+    return usuario.GetNombreUsuario();  // devolvemos el nombre del usuario que se ha identificado
   } else {
     std::cout << RED << "Contraseña incorrecta\n" << RESET;
     sleep(2);

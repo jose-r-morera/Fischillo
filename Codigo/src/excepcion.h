@@ -20,6 +20,7 @@
  *
  * Historial de revisiones
  *          22/04/2023 - Creación (primera versión) del código
+ *          10/05/2023 - Última revisión para la entrega del proyecto
  */
 
 #ifndef EXCEPCION_H

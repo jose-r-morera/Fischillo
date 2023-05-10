@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/base_datos.h
 ctime
 -
 iostream
@@ -14,21 +14,21 @@ iostream
 vector
 -
 cerradura_inteligente.h
-/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cerradura_inteligente.h
 excepcion.h
-/home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/excepcion.h
 usuario.h
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.h
 
-/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cerradura_inteligente.h
 fstream
 -
 iostream
 -
 
-/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente_funciones.cc
 cliente_funciones.h
-/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente_funciones.h
 unistd.h
 -
 iostream
@@ -36,37 +36,37 @@ iostream
 limits
 -
 colores.h
-/home/jr/Desktop/SmartLock/Codigo/src/colores.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/colores.h
 identificacion.h
-/home/jr/Desktop/SmartLock/Codigo/src/identificacion.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/identificacion.h
 
-/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cliente_funciones.h
 string
 -
 base_datos.h
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/base_datos.h
 usuario.h
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.h
 
-/home/jr/Desktop/SmartLock/Codigo/src/colores.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/colores.h
 iostream
 -
 
-/home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/excepcion.h
 exception
 -
 iostream
 -
 
-/home/jr/Desktop/SmartLock/Codigo/src/identificacion.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/identificacion.h
 string
 -
 base_datos.h
-/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/base_datos.h
 usuario.h
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.h
 
-/home/jr/Desktop/SmartLock/Codigo/src/usuario.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/usuario.h
 fstream
 -
 iostream
@@ -74,5 +74,5 @@ iostream
 vector
 -
 cerradura_inteligente.h
-/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.h
+/home/usuario/2o_cuatri/FIS/Fischillo/Codigo/src/cerradura_inteligente.h
 
