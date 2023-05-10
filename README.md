@@ -7,7 +7,7 @@ Hay dos roles de usuario: **administrador** y **usuario**.
 
     -> Los usuarios pueden abrir las cerraduras a las que tengan acceso.
 
-# Administrador
+# *Administrador*
 Existe un usuario administrador preconfigurado, con permisos especiales.
 
 Para probar el programa desde el aspecto del usuario normal, puede introducir las siguientes credenciales:
@@ -16,7 +16,7 @@ Para probar el programa desde el aspecto del usuario normal, puede introducir la
 
 Tras el inicio de sesión, se podrá modificar tanto el nombre de usuario así como la contraseña, por temas de seguridad. 
 
-# Usuarios
+# *Usuarios*
 Para probar el programa desde el aspecto del usuario normal, puede introducir las siguientes credenciales:
 - Usuario: **platinita**
 - Contraseña: **12345**
