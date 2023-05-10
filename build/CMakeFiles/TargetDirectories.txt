@@ -1,5 +1,5 @@
 /home/jr/Desktop/SmartLock/build/CMakeFiles/rebuild_cache.dir
 /home/jr/Desktop/SmartLock/build/CMakeFiles/edit_cache.dir
-/home/jr/Desktop/SmartLock/build/CMakeFiles/funciona.dir
+/home/jr/Desktop/SmartLock/build/CMakeFiles/debug.dir
 /home/jr/Desktop/SmartLock/build/CMakeFiles/fischillo.dir
 /home/jr/Desktop/SmartLock/build/CMakeFiles/runTests.dir

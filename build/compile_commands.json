@@ -1,23 +1,23 @@
 [
 {
   "directory": "/home/jr/Desktop/SmartLock/build",
-  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/funciona.dir/src/cerradura_inteligente.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc",
+  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/debug.dir/src/cerradura_inteligente.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc",
   "file": "/home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc"
 },
 {
   "directory": "/home/jr/Desktop/SmartLock/build",
-  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/funciona.dir/src/usuario.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc",
+  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/debug.dir/src/usuario.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc",
   "file": "/home/jr/Desktop/SmartLock/Codigo/src/usuario.cc"
 },
 {
   "directory": "/home/jr/Desktop/SmartLock/build",
-  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/funciona.dir/src/base_datos.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc",
+  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/debug.dir/src/base_datos.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc",
   "file": "/home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc"
 },
 {
   "directory": "/home/jr/Desktop/SmartLock/build",
-  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/funciona.dir/src/funciona.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/funciona.cc",
-  "file": "/home/jr/Desktop/SmartLock/Codigo/src/funciona.cc"
+  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -std=gnu++17 -o CMakeFiles/debug.dir/src/debug.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/debug.cc",
+  "file": "/home/jr/Desktop/SmartLock/Codigo/src/debug.cc"
 },
 {
   "directory": "/home/jr/Desktop/SmartLock/build",
@@ -28,6 +28,11 @@
   "directory": "/home/jr/Desktop/SmartLock/build",
   "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -Wall -Wextra -Wpedantic -Weffc++ -std=gnu++17 -o CMakeFiles/fischillo.dir/src/cliente_funciones.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc",
   "file": "/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc"
+},
+{
+  "directory": "/home/jr/Desktop/SmartLock/build",
+  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -Wall -Wextra -Wpedantic -Weffc++ -std=gnu++17 -o CMakeFiles/fischillo.dir/src/identificacion.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc",
+  "file": "/home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc"
 },
 {
   "directory": "/home/jr/Desktop/SmartLock/build",
@@ -68,6 +73,11 @@
   "directory": "/home/jr/Desktop/SmartLock/build",
   "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -Wall -Wextra -Wpedantic -Weffc++ -std=gnu++17 -o CMakeFiles/runTests.dir/src/cliente_funciones.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc",
   "file": "/home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc"
+},
+{
+  "directory": "/home/jr/Desktop/SmartLock/build",
+  "command": "/usr/bin/clang++-10   -I/home/jr/Desktop/SmartLock/Codigo/src  -g -Wall -pedantic -O0   -Wall -Wextra -Wpedantic -Weffc++ -std=gnu++17 -o CMakeFiles/runTests.dir/src/identificacion.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc",
+  "file": "/home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc"
 },
 {
   "directory": "/home/jr/Desktop/SmartLock/build",

@@ -122,9 +122,22 @@ CMakeFiles/runTests.dir/src/cliente_funciones.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/cliente_funciones.cc.s"
 	/usr/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/cliente_funciones.cc -o CMakeFiles/runTests.dir/src/cliente_funciones.cc.s
 
+CMakeFiles/runTests.dir/src/identificacion.cc.o: CMakeFiles/runTests.dir/flags.make
+CMakeFiles/runTests.dir/src/identificacion.cc.o: /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/runTests.dir/src/identificacion.cc.o"
+	/usr/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/identificacion.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc
+
+CMakeFiles/runTests.dir/src/identificacion.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTests.dir/src/identificacion.cc.i"
+	/usr/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc > CMakeFiles/runTests.dir/src/identificacion.cc.i
+
+CMakeFiles/runTests.dir/src/identificacion.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTests.dir/src/identificacion.cc.s"
+	/usr/bin/clang++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jr/Desktop/SmartLock/Codigo/src/identificacion.cc -o CMakeFiles/runTests.dir/src/identificacion.cc.s
+
 CMakeFiles/runTests.dir/src/base_datos.cc.o: CMakeFiles/runTests.dir/flags.make
 CMakeFiles/runTests.dir/src/base_datos.cc.o: /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/runTests.dir/src/base_datos.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/runTests.dir/src/base_datos.cc.o"
 	/usr/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/base_datos.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/base_datos.cc
 
 CMakeFiles/runTests.dir/src/base_datos.cc.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/runTests.dir/src/base_datos.cc.s: cmake_force
 
 CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o: CMakeFiles/runTests.dir/flags.make
 CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o: /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o"
 	/usr/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/cerradura_inteligente.cc
 
 CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.s: cmake_force
 
 CMakeFiles/runTests.dir/src/usuario.cc.o: CMakeFiles/runTests.dir/flags.make
 CMakeFiles/runTests.dir/src/usuario.cc.o: /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/runTests.dir/src/usuario.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/runTests.dir/src/usuario.cc.o"
 	/usr/bin/clang++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTests.dir/src/usuario.cc.o -c /home/jr/Desktop/SmartLock/Codigo/src/usuario.cc
 
 CMakeFiles/runTests.dir/src/usuario.cc.i: cmake_force
@@ -168,6 +181,7 @@ runTests_OBJECTS = \
 "CMakeFiles/runTests.dir/test/test_base_datos.cc.o" \
 "CMakeFiles/runTests.dir/test/test_usuarios.cc.o" \
 "CMakeFiles/runTests.dir/src/cliente_funciones.cc.o" \
+"CMakeFiles/runTests.dir/src/identificacion.cc.o" \
 "CMakeFiles/runTests.dir/src/base_datos.cc.o" \
 "CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o" \
 "CMakeFiles/runTests.dir/src/usuario.cc.o"
@@ -180,13 +194,14 @@ runTests_EXTERNAL_OBJECTS =
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/test/test_base_datos.cc.o
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/test/test_usuarios.cc.o
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/src/cliente_funciones.cc.o
+/home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/src/identificacion.cc.o
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/src/base_datos.cc.o
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/src/cerradura_inteligente.cc.o
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/src/usuario.cc.o
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/build.make
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: /usr/local/lib/libgtest.a
 /home/jr/Desktop/SmartLock/Codigo/build/runTests: CMakeFiles/runTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/jr/Desktop/SmartLock/Codigo/build/runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable /home/jr/Desktop/SmartLock/Codigo/build/runTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

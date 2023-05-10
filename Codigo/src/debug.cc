@@ -83,7 +83,7 @@ int main() {
 
   std::vector<Usuario> usuarios = base_datos_leida.GetUsuarios();
   for (const auto& usuario : usuarios) {
-    std::cout << usuario.GetNombreUsuario() << "Admin" << usuario.EsAdministrador() << std::endl;
+    std::cout << usuario.GetNombreUsuario() << "; Es Admin: " << std::boolalpha << usuario.EsAdministrador() << std::endl;
   }
 
   // Open a file for writing

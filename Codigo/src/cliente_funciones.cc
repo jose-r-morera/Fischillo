@@ -474,11 +474,10 @@ void CambiarContrasenyaUsuario(Usuario &usuario) {
   while (nueva_contrasenya_1 != nueva_contrasenya_2) {
     nueva_contrasenya_1 = IntroducirContrasenya();
     while (usuario.ConfirmarContrasenya(nueva_contrasenya_1)) {
-      std::cerr << RED << "No se puede introducir la misma contraseña." << RESET << std::endl
-                << "Introduzca la nueva contraseña:" << std::endl;
+      std::cerr << RED << "No se puede introducir la misma contraseña." << RESET << std::endl;
       nueva_contrasenya_1 = IntroducirContrasenya();
     }
-    std::cout << "Introduza de nuevo la contraseña:" << std::endl;
+    std::cout << "Repita su nueva contraseña:" << std::endl;
     nueva_contrasenya_2 = IntroducirContrasenya();
     if (nueva_contrasenya_1 == nueva_contrasenya_2) {
       usuario.SetContrasenya(nueva_contrasenya_1);
@@ -520,7 +519,7 @@ void ModificarCuentaUsuario(BaseDatos &base_datos, Usuario &usuario) {
       CambiarNombreUsuario(base_datos, usuario);
       break;
     case 2:
-      std::cout << PURPLE << "Modificar contraseña." << RESET << std::endl;
+      std::cout << PURPLE << "Introducir nueva contraseña." << RESET << std::endl;
       CambiarContrasenyaUsuario(usuario);
       break;
     case 3:

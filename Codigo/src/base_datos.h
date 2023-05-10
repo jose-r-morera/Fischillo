@@ -34,6 +34,7 @@
 #include "excepcion.h"
 #include "usuario.h"
 
+// Estructura para almacenar los registros de acceso
 struct acceso {
   acceso() {}
   acceso(const std::string& nombre_usuario, const unsigned id_cerradura, const std::string& accion)

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/jr/Desktop/SmartLock/Codigo/build/funciona"
+			"path" : "/home/jr/Desktop/SmartLock/Codigo/build/debug"
 		}
 	],
 	"backtrace" : 1,
@@ -25,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 71,
+				"line" : 73,
 				"parent" : 0
 			},
 			{
@@ -65,7 +65,7 @@
 			]
 		}
 	],
-	"id" : "funciona::@6890427a1f51a3e7e1df",
+	"id" : "debug::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -81,8 +81,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "funciona",
-	"nameOnDisk" : "funciona",
+	"name" : "debug",
+	"nameOnDisk" : "debug",
 	"paths" : 
 	{
 		"build" : ".",
@@ -124,7 +124,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/funciona.cc",
+			"path" : "src/debug.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

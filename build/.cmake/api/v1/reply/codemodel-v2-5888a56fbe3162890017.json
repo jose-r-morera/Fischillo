@@ -41,22 +41,22 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "debug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-debug-Debug-8462b93880b187748a0c.json",
+					"name" : "debug",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "fischillo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fischillo-Debug-76fc8a74930a52ecf98e.json",
+					"jsonFile" : "target-fischillo-Debug-49def6ab6ee598a42640.json",
 					"name" : "fischillo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "funciona::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-funciona-Debug-2b4065ecaba088eec2f5.json",
-					"name" : "funciona",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "runTests::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-runTests-Debug-14d63ed5a23ffa91443a.json",
+					"jsonFile" : "target-runTests-Debug-de63f3942071efb69c6d.json",
 					"name" : "runTests",
 					"projectIndex" : 0
 				}

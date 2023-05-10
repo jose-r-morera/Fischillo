@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/jr/Desktop/SmartLock/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/funciona.dir/all
+all: CMakeFiles/debug.dir/all
 all: CMakeFiles/fischillo.dir/all
 all: CMakeFiles/runTests.dir/all
 
@@ -65,38 +65,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/funciona.dir/clean
+clean: CMakeFiles/debug.dir/clean
 clean: CMakeFiles/fischillo.dir/clean
 clean: CMakeFiles/runTests.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/funciona.dir
+# Target rules for target CMakeFiles/debug.dir
 
 # All Build rule for target.
-CMakeFiles/funciona.dir/all:
-	$(MAKE) -f CMakeFiles/funciona.dir/build.make CMakeFiles/funciona.dir/depend
-	$(MAKE) -f CMakeFiles/funciona.dir/build.make CMakeFiles/funciona.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target funciona"
-.PHONY : CMakeFiles/funciona.dir/all
+CMakeFiles/debug.dir/all:
+	$(MAKE) -f CMakeFiles/debug.dir/build.make CMakeFiles/debug.dir/depend
+	$(MAKE) -f CMakeFiles/debug.dir/build.make CMakeFiles/debug.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target debug"
+.PHONY : CMakeFiles/debug.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/funciona.dir/rule: cmake_check_build_system
+CMakeFiles/debug.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/funciona.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 0
-.PHONY : CMakeFiles/funciona.dir/rule
+.PHONY : CMakeFiles/debug.dir/rule
 
 # Convenience name for target.
-funciona: CMakeFiles/funciona.dir/rule
+debug: CMakeFiles/debug.dir/rule
 
-.PHONY : funciona
+.PHONY : debug
 
 # clean rule for target.
-CMakeFiles/funciona.dir/clean:
-	$(MAKE) -f CMakeFiles/funciona.dir/build.make CMakeFiles/funciona.dir/clean
-.PHONY : CMakeFiles/funciona.dir/clean
+CMakeFiles/debug.dir/clean:
+	$(MAKE) -f CMakeFiles/debug.dir/build.make CMakeFiles/debug.dir/clean
+.PHONY : CMakeFiles/debug.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/fischillo.dir
@@ -105,12 +105,12 @@ CMakeFiles/funciona.dir/clean:
 CMakeFiles/fischillo.dir/all:
 	$(MAKE) -f CMakeFiles/fischillo.dir/build.make CMakeFiles/fischillo.dir/depend
 	$(MAKE) -f CMakeFiles/fischillo.dir/build.make CMakeFiles/fischillo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target fischillo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=6,7,8,9,10,11,12 "Built target fischillo"
 .PHONY : CMakeFiles/fischillo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fischillo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fischillo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 0
 .PHONY : CMakeFiles/fischillo.dir/rule
@@ -132,12 +132,12 @@ CMakeFiles/fischillo.dir/clean:
 CMakeFiles/runTests.dir/all:
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/depend
 	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20 "Built target runTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jr/Desktop/SmartLock/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22 "Built target runTests"
 .PHONY : CMakeFiles/runTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/runTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jr/Desktop/SmartLock/build/CMakeFiles 0
 .PHONY : CMakeFiles/runTests.dir/rule

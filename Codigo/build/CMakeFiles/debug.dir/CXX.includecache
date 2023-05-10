@@ -36,6 +36,14 @@ iostream
 iostream
 -
 
+/home/jr/Desktop/SmartLock/Codigo/src/debug.cc
+fstream
+-
+iostream
+-
+base_datos.h
+/home/jr/Desktop/SmartLock/Codigo/src/base_datos.h
+
 /home/jr/Desktop/SmartLock/Codigo/src/excepcion.h
 exception
 -
