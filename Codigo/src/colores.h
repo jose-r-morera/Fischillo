@@ -13,7 +13,7 @@
  *           Steven Rogriguez Morales, alu0101477381@ull.edu.es
  * @date    24/04/2023
  * @file    colores.h
- * @brief   Definiciones de colores para las fuentes y el fondo
+ * @brief   Definiciones de colores para las fuentes y el fondo y todo l que sea necesario
  *
  *
  * @see
@@ -22,7 +22,7 @@
  *          24/04/2023 - Creación (primera versión) del código
  *          10/05/2023 - Última revisión para la entrega del proyecto
  */
-
+ 
 #ifndef COLORES_H
 #define COLORES_H
 
