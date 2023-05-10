@@ -14,9 +14,11 @@ Para probar el programa desde el aspecto del usuario normal, puede introducir la
 - Usuario: **admin**
 - Contraseña: **12345**
 
-Tras el inicio de sesión, se podrá modificar tanto el nombre de usuario así como la contraseña, por temas de seguridad. 
+Tras el inicio de sesión, se podrá modificar tanto el nombre de usuario así como la contraseña, por motivos de seguridad. 
 
 # *Usuarios*
-Para probar el programa desde el aspecto del usuario normal, puede introducir las siguientes credenciales:
+Para probar el programa desde el aspecto del usuario normal, puede sesióncon las siguientes credenciales:
 - Usuario: **platinita**
 - Contraseña: **12345**
+
+Alternativamente, se pueden crear nuevos usuarios desde la interfaz del programa.
