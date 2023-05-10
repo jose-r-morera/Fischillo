@@ -1,7 +1,10 @@
 # SmartLock
 Programa para el control de acceso a una cerradura inteligente.
+
 Hay dos roles de usuario: **administrador** y **usuario**.
+
     -> El administrador puede gestionar los usuarios, las cerraduras, etc. 
+    
     -> Los usuarios pueden abrir las cerraduras a las que tengan acceso.
 
 # Administrador
