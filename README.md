@@ -1,4 +1,4 @@
-# SmartLock
+# Proyecto SmartLock
 Programa para el control de acceso a una cerradura inteligente.
 
 Hay dos roles de usuario: **administrador** y **usuario**.
